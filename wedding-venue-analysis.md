@@ -1,211 +1,399 @@
-# Comprehensive Wedding Venue Analysis
-## March 2027 | 250 Guests | $250,000 Budget
-### East Coast Mexico vs. South Florida
+# Wedding Venue Value Analysis
+## 250 Guests | Southern Florida & Mexico
 
 ---
 
 ## Executive Summary
 
-After extensive research across 10 luxury wedding venues (4 in Florida, 6 in Mexico), this analysis provides comprehensive cost estimates, value assessments, and rankings to help you make an informed decision for your March 2027 wedding with 250 guests and a $250,000 budget.
+This analysis ranks 19 wedding venues across Southern Florida and Mexico based on **VALUE** - defined as the price-to-luxury/wow-factor tradeoff. All costs are estimated for 250 guests including service charges and taxes where applicable.
 
-**Key Finding:** Your $250,000 budget is sufficient for most venues analyzed, with Mexico generally offering better value (30-40% savings) while maintaining equivalent or superior luxury. However, Florida venues offer logistical advantages for U.S.-based guests.
+**Key Findings:**
+- **Best Overall Value:** Grand Velas Riviera Maya - Five Diamond luxury at $234-380/pp effective cost
+- **Best Florida Value:** Loews Coral Gables at $175/pp (if outside catering confirmed)
+- **Best Wow Factor for Price:** Henry Morrison Flagler Museum - historic Gilded Age mansion
+- **Most Expensive:** Eau Palm Beach ($580/pp) and Fontainebleau ($150K minimum)
 
 ---
 
-## Part 1: Detailed Venue Cost Analysis
+## Quick Reference: Final Value Rankings
+
+| Rank | Venue | Location | Est. Total Cost | $/Person | Luxury Score | VALUE SCORE |
+|------|-------|----------|-----------------|----------|--------------|-------------|
+| 1 | Grand Velas Riviera Maya | Mexico | $60-95K | ~$110* | 8.5/10 | **9.5** |
+| 2 | Hotel Xcaret Arte | Mexico | $75-100K | ~$234 | 8.0/10 | **8.8** |
+| 3 | Loews Coral Gables | Florida | $75-95K | $175 | 6.5/10 | **8.5** |
+| 4 | Henry Morrison Flagler Museum | Florida | $110-140K | ~$440-560 | 9.5/10 | **8.2** |
+| 5 | Ritz Carlton Fort Lauderdale | Florida | $95-115K | $239 | 8.0/10 | **8.0** |
+| 6 | JW Marriott Cancun | Mexico | $80-120K | ~$250 | 7.5/10 | **7.8** |
+| 7 | Diplomat Beach Hollywood | Florida | $100-130K | ~$250 | 7.5/10 | **7.5** |
+| 8 | Fort Lauderdale Marriott Harbor Beach | Florida | $100-125K | ~$250 | 7.0/10 | **7.3** |
+| 9 | JW Marriott Marco Island | Florida | $110-135K | ~$275 | 7.5/10 | **7.2** |
+| 10 | Omni Fort Lauderdale | Florida | $105-130K | $270 | 7.0/10 | **7.0** |
+| 11 | Vizcaya Museum | Florida | $130-160K | ~$520-640 | 10/10 | **6.8** |
+| 12 | The Biltmore Hotel | Florida | $115-140K | $290 | 9.0/10 | **6.5** |
+| 13 | Ritz-Carlton Naples | Florida | $140-170K | $345-375 | 8.5/10 | **6.2** |
+| 14 | Ritz-Carlton Key Biscayne | Florida | $140-170K | $360 | 8.5/10 | **6.0** |
+| 15 | Naples Beach Club Four Seasons | Florida | $145-180K | ~$375 | 9.5/10 | **5.8** |
+| 16 | Nizuc | Mexico | $150-200K | ~$600-800 | 9.5/10 | **5.5** |
+| 17 | Waldorf Astoria Cancun | Mexico | $150-200K | ~$600-800 | 9.0/10 | **5.3** |
+| 18 | Fontainebleau Miami Beach | Florida | $190-225K | $265 ($150K min) | 9.0/10 | **4.8** |
+| 19 | Eau Palm Beach Resort & Spa | Florida | $210-240K | $580 ($145K min) | 8.0/10 | **4.0** |
+
+*Grand Velas $110/pp is wedding cost only; guests pay their own all-inclusive room rates (~$670/night)*
 
 ---
+
+## Part 1: Detailed Venue Analysis
 
 ### FLORIDA VENUES
 
 ---
 
-### 1. The Ritz-Carlton, Fort Lauderdale
+### 1. Ritz Carlton Fort Lauderdale
+**Quoted Price: $239/pp final**
 
-**Property Overview:**
-- Only Five Diamond property in Fort Lauderdale
-- Oceanfront location on Fort Lauderdale Beach
-- Grand Ballroom: 8,500 sq ft, up to 400 guests
-- Peak season: January-May, November-December (March is peak)
+| Cost Component | Estimate |
+|----------------|----------|
+| F&B (250 x $239) | $59,750 |
+| Service Charge (22%) | $13,145 |
+| Sales Tax (7%) | $5,103 |
+| Ceremony Setup | $3,000-5,000 |
+| Decor/Florals | $10,000-20,000 |
+| Photography/Video | $8,000-15,000 |
+| **TOTAL** | **$95,000 - $115,000** |
 
-**Estimated Costs for 250 Guests:**
+**Luxury/Wow Factor: 8.0/10**
+- Five Diamond Ritz-Carlton brand
+- Oceanfront location
+- Beach or church ceremony options (per your notes)
+- Excellent service reputation
 
-| Category | Estimated Cost |
-|----------|----------------|
-| Food & Beverage (250 × $275 avg) | $68,750 |
-| Service Charge (22%) | $15,125 |
-| Tax (7%) | $5,871 |
-| Venue Rental Fee | $5,000-$10,000 |
-| Ceremony Setup | $3,000-$5,000 |
-| Floral & Décor | $15,000-$25,000 |
-| Photography/Video | $8,000-$15,000 |
-| DJ/Entertainment | $3,000-$8,000 |
-| Wedding Cake | $2,000-$4,000 |
-| Wedding Planner | $5,000-$10,000 |
-| Accommodations (Couple + Family) | $5,000-$10,000 |
-| **TOTAL ESTIMATED** | **$135,000 - $175,000** |
-
-**Luxury Rating:** ★★★★★ (5/5)
-- Forbes/AAA Five Diamond
-- Exceptional service reputation
-- Hungarian crystal chandeliers, silk-padded walls
-- Outstanding food reviews
-
-**Pros:**
-- World-class Ritz-Carlton service
-- Convenient for U.S. guests (no passport required)
-- Exceptional food and beverage quality
-- All event spaces on same floor
-- Complimentary suite for couple with $20K+ F&B spend
-
-**Cons:**
-- Peak season pricing in March
-- Higher per-person costs than Mexico all-inclusive options
-- More traditional/formal atmosphere
+**Pros:** Brand prestige, no passport needed, excellent food quality
+**Cons:** Peak season March pricing, more traditional atmosphere
+**Value Score: 8.0** - Strong luxury at reasonable price point
 
 ---
 
-### 2. The Diplomat Beach Resort, Hollywood
+### 2. Henry Morrison Flagler Museum
+**Quoted: $15K membership + $35K event fee + catering/rentals**
 
-**Property Overview:**
-- Hilton Curio Collection property
-- 209,000 sq ft of event space
-- Grand Ballroom: 50,000 sq ft (up to 1,750 guests)
-- AAA Four Diamond, Cvent #1 Hotel in Florida 2024
+| Cost Component | Estimate |
+|----------------|----------|
+| Membership Dues | $15,000 |
+| Event Fee (ceremony + reception) | $35,000 |
+| Refundable Damage Deposit | $2,000 |
+| Catering (approved vendor, ~$150/pp) | $37,500 |
+| Bar Service (~$75/pp) | $18,750 |
+| Service/Tax on F&B (~25%) | $14,000 |
+| Wedding Planner (required from list) | $10,000-15,000 |
+| Chair/Table/Linen Rentals | $8,000-12,000 |
+| **TOTAL** | **$110,000 - $140,000** |
 
-**Estimated Costs for 250 Guests:**
-
-| Category | Estimated Cost |
-|----------|----------------|
-| Food & Beverage (250 × $225 avg) | $56,250 |
-| Service Charge (22%) | $12,375 |
-| Tax (7%) | $4,804 |
-| Venue Rental Fee | $3,000-$8,000 |
-| Ceremony Setup | $2,500-$4,000 |
-| Floral & Décor | $12,000-$20,000 |
-| Photography/Video | $6,000-$12,000 |
-| DJ/Entertainment | $3,000-$6,000 |
-| Wedding Cake | $1,500-$3,000 |
-| Wedding Planner | $4,000-$8,000 |
-| Accommodations | $4,000-$8,000 |
-| **TOTAL ESTIMATED** | **$110,000 - $150,000** |
-
-**Luxury Rating:** ★★★★☆ (4/5)
-- AAA Four Diamond
-- Excellent service reviews
-- Oceanfront and Intracoastal views
-- Modern, renovated property
-
-**Pros:**
-- Largest ballroom in South Florida
-- 2025 promo: 15% off banquet pricing, free 5th hour of bar
-- Excellent reviews from wedding couples
-- Multiple venue options (beach, ballroom, terrace)
-- More affordable than Ritz-Carlton
-
-**Cons:**
-- Venue confirmation only 30 days before event (per reviews)
-- Not as prestigious as Ritz-Carlton brand
-- Less intimate feel due to resort size
-
----
-
-### 3. Omni Fort Lauderdale
-
-**Property Overview:**
-- Brand new property (opened Fall 2025)
-- 801 guest rooms, 82 suites
-- 120,000 sq ft of event space
-- Waterway Ballroom: 30,000 sq ft (largest in Greater Fort Lauderdale)
-- Connected to Broward County Convention Center
-
-**Estimated Costs for 250 Guests:**
-
-| Category | Estimated Cost |
-|----------|----------------|
-| Food & Beverage (250 × $240 avg) | $60,000 |
-| Service Charge (22%) | $13,200 |
-| Tax (7%) | $5,124 |
-| Venue Rental Fee | $5,000-$12,000 |
-| Ceremony Setup | $3,000-$5,000 |
-| Floral & Décor | $12,000-$22,000 |
-| Photography/Video | $6,000-$12,000 |
-| DJ/Entertainment | $3,000-$6,000 |
-| Wedding Cake | $1,500-$3,500 |
-| Wedding Planner | $4,000-$8,000 |
-| Accommodations | $4,000-$8,000 |
-| **TOTAL ESTIMATED** | **$120,000 - $165,000** |
-
-**Luxury Rating:** ★★★★☆ (4/5)
-- Brand new, state-of-the-art facility
-- Omni Hotels luxury standards
-- Panoramic Intracoastal views
-- Modern design and amenities
-
-**Pros:**
-- Brand new property (2025) - pristine condition
-- Massive event space options
-- 6th-floor Waterway Terrace with panoramic views
-- Proximity to airport (5 miles)
-- Competitive introductory pricing expected
-
-**Cons:**
-- No wedding-specific track record yet
-- Accepting group requests starting January 2026
-- Adjacent to convention center (less intimate)
-- Limited wedding reviews available
-
----
-
-### 4. Vizcaya Museum & Gardens, Miami
-
-**Property Overview:**
-- Historic Italian Renaissance-inspired estate
+**Luxury/Wow Factor: 9.5/10**
+- Gilded Age mansion built 1902 by Standard Oil co-founder
 - National Historic Landmark
-- Outdoor capacity: up to 300 guests
-- Indoor courtyard: up to 100 guests
-- Unique, non-hotel venue
+- Absolutely unique venue - no other like it
+- Indoor reception for 300 guests
+- Museum-quality architecture and grounds
 
-**Estimated Costs for 250 Guests:**
+**Pros:** One-of-a-kind historic venue, incredible photo opportunities, prestigious
+**Cons:** Must use approved planners/vendors, no on-site accommodations, logistics complexity
+**Value Score: 8.2** - Exceptional uniqueness justifies premium
 
-| Category | Estimated Cost |
-|----------|----------------|
-| Base Venue Rental (100 guests) | $23,000 |
-| Additional 150 guests × $25 | $3,750 |
-| Tent Rental (required 100+ guests) | $10,000-$12,500 |
+---
+
+### 3. The Biltmore Hotel
+**Quoted Price: $290/pp**
+
+| Cost Component | Estimate |
+|----------------|----------|
+| F&B (250 x $290) | $72,500 |
+| Service Charge (22%) | $15,950 |
+| Sales Tax (7%) | $6,193 |
+| Venue/Ceremony | $5,000-10,000 |
+| Decor/Extras | $15,000-25,000 |
+| **TOTAL** | **$115,000 - $140,000** |
+
+**Luxury/Wow Factor: 9.0/10**
+- 1926 historic landmark hotel
+- Spanish/Mediterranean architecture
+- Iconic Coral Gables location
+- AAA Four Diamond
+- Stunning outdoor areas and grand ballrooms
+
+**Pros:** Historic elegance, world-famous venue, beautiful grounds
+**Cons:** Higher per-person cost, older property
+**Value Score: 6.5** - Beautiful but premium priced for tier
+
+---
+
+### 4. Omni Fort Lauderdale
+**Quoted Price: $270/pp (includes $10K food stations)**
+
+| Cost Component | Estimate |
+|----------------|----------|
+| F&B (250 x $270) | $67,500 |
+| Service Charge (22%) | $14,850 |
+| Sales Tax (7%) | $5,765 |
+| Venue/Extras | $10,000-20,000 |
+| Decor/Photography | $15,000-25,000 |
+| **TOTAL** | **$105,000 - $130,000** |
+
+**Luxury/Wow Factor: 7.0/10**
+- Brand new property
+- Modern facilities
+- Intracoastal views
+- Large capacity
+
+**Pros:** New/pristine condition, competitive pricing, includes food stations
+**Cons:** No outdoor ceremony area, no wedding track record yet
+**Value Score: 7.0** - Good value but lacks outdoor ceremony option
+
+---
+
+### 5. Fontainebleau Miami Beach
+**Quoted: $265/pp with $150K minimum**
+
+| Cost Component | Estimate |
+|----------------|----------|
+| F&B Minimum | $150,000 |
+| Service Charge (22%) | $33,000 |
+| Sales Tax (7%) | $12,810 |
+| Venue/Extras | $10,000-15,000 |
+| **TOTAL** | **$190,000 - $225,000** |
+
+**Luxury/Wow Factor: 9.0/10**
+- Iconic Miami landmark since 1954
+- Featured in countless films
+- Legendary glamour and prestige
+- Multiple stunning venue options
+
+**Pros:** Iconic status, Miami Beach location, glamorous atmosphere
+**Cons:** $150K minimum makes this expensive for 250 guests ($600/pp effective)
+**Value Score: 4.8** - Iconic but minimum makes it poor value for 250 guests
+
+---
+
+### 6. Diplomat Beach Hollywood
+**Estimated: ~$250/pp**
+
+| Cost Component | Estimate |
+|----------------|----------|
+| F&B (250 x $250) | $62,500 |
+| Service Charge (22%) | $13,750 |
+| Sales Tax (7%) | $5,338 |
+| Venue/Extras | $10,000-20,000 |
+| Decor/Photography | $15,000-25,000 |
+| **TOTAL** | **$100,000 - $130,000** |
+
+**Luxury/Wow Factor: 7.5/10**
+- Hilton Curio Collection
+- 50,000 sq ft Grand Ballroom
+- Oceanfront and Intracoastal views
+- AAA Four Diamond
+- New oceanfront event lawn opening 2026
+
+**Pros:** Largest ballroom in South Florida, 2025 promos available, proven wedding team
+**Cons:** Can feel convention-like, confirmation 30 days before (per reviews)
+**Value Score: 7.5** - Solid value with large capacity
+
+---
+
+### 7. JW Marriott Marco Island
+**Estimated: ~$275/pp (not responsive, need quote)**
+
+| Cost Component | Estimate |
+|----------------|----------|
+| F&B (250 x $275) | $68,750 |
+| Service Charge (22%) | $15,125 |
+| Sales Tax (7%) | $5,871 |
+| Venue/Extras | $10,000-20,000 |
+| **TOTAL** | **$110,000 - $135,000** |
+
+**Luxury/Wow Factor: 7.5/10**
+- Gulf coast location
+- Beautiful beach resort
+- JW Marriott luxury tier
+- Island destination feel
+
+**Pros:** Gulf coast beach, destination feel while staying in Florida
+**Cons:** No outside catering allowed, not responsive to inquiries
+**Value Score: 7.2** - Nice option but catering restriction limits flexibility
+
+---
+
+### 8. Vizcaya Museum
+**Venue: $23K base + catering + mandatory extras**
+
+| Cost Component | Estimate |
+|----------------|----------|
+| Base Rental (100 guests) | $23,000 |
+| Additional Guests (150 x $25) | $3,750 |
+| Tent Rental (required outdoor) | $10,000-12,500 |
 | Extended Hours (2 hrs) | $4,800 |
 | Catering Permit | $525 |
-| Catering (approved vendor, 250 × $200) | $50,000 |
-| Service Charge & Tax (~25%) | $12,500 |
-| Bar Service (250 × $75) | $18,750 |
-| Floral & Décor | $15,000-$25,000 |
-| Photography/Video | $8,000-$15,000 |
-| DJ/Entertainment | $3,000-$6,000 |
-| Wedding Cake | $2,000-$4,000 |
-| Wedding Planner (required from list) | $8,000-$15,000 |
-| Police Officers (recommended 200+) | $600-$1,200 |
-| **TOTAL ESTIMATED** | **$160,000 - $195,000** |
+| Catering (approved, ~$150/pp) | $37,500 |
+| Bar Service (~$75/pp) | $18,750 |
+| Service/Tax (~25%) | $14,000 |
+| Wedding Planner (required) | $10,000-15,000 |
+| Chair/Table/Linen Rentals | $8,000-12,000 |
+| Police Officers (recommended) | $600-1,200 |
+| **TOTAL** | **$130,000 - $160,000** |
 
-**Luxury Rating:** ★★★★★ (5/5 for uniqueness)
-- One-of-a-kind historic venue
-- Italian Renaissance architecture
-- Stunning gardens and waterfront
+**Luxury/Wow Factor: 10/10**
+- National Historic Landmark
+- Italian Renaissance estate
+- Biscayne Bay waterfront
+- Absolutely one-of-a-kind
 - Unparalleled photo opportunities
 
-**Pros:**
-- Absolutely unique and iconic venue
-- "Destination wedding feel without leaving Miami"
-- Stunning architecture and gardens
-- BYOB allowed
-- Extraordinary photo backdrops
+**Pros:** Most unique venue in Florida, stunning architecture, extraordinary backdrop
+**Cons:** Only outdoor for 300 (indoor limited to 100), tent required, approved vendors only, no on-site lodging
+**Value Score: 6.8** - Highest wow factor but complex logistics and high cost
 
-**Cons:**
-- Most expensive Florida option
-- No on-site getting ready spaces
-- Must use approved vendors only
-- Tent required for 100+ guests adds significant cost
-- No hotel accommodations on-site
-- Weather dependent for outdoor elements
+---
+
+### 9. Fort Lauderdale Marriott Harbor Beach
+**Estimated: ~$250-272/pp (checking with Raj)**
+
+| Cost Component | Estimate |
+|----------------|----------|
+| F&B (250 x $260) | $65,000 |
+| Service Charge (22%) | $14,300 |
+| Sales Tax (7%) | $5,551 |
+| Venue/Extras | $10,000-18,000 |
+| **TOTAL** | **$100,000 - $125,000** |
+
+**Luxury/Wow Factor: 7.0/10**
+- Private beachfront on 16 acres
+- 10,000 sq ft Ocean Ballroom
+- Up to 20 event areas
+- Atlantic coastline views
+
+**Pros:** Beautiful beach location, multiple venue options, established property
+**Cons:** No outside catering (checking), Marriott tier (not luxury brand)
+**Value Score: 7.3** - Good beach resort value
+
+---
+
+### 10. The Ritz-Carlton Key Biscayne
+**Quoted Price: $360/pp**
+
+| Cost Component | Estimate |
+|----------------|----------|
+| F&B (250 x $360) | $90,000 |
+| Service Charge (22%) | $19,800 |
+| Sales Tax (7%) | $7,686 |
+| Venue/Extras | $10,000-20,000 |
+| Decor/Photography | $15,000-25,000 |
+| **TOTAL** | **$140,000 - $170,000** |
+
+**Luxury/Wow Factor: 8.5/10**
+- Ritz-Carlton brand
+- Private island location
+- Exclusive, secluded feel
+- Beautiful beach setting
+
+**Pros:** Ritz service, exclusive island location, destination feel
+**Cons:** Highest Ritz pricing in area, remote location adds guest logistics
+**Value Score: 6.0** - Premium pricing for location exclusivity
+
+---
+
+### 11. Loews Coral Gables
+**Quoted Price: $175/pp (need to check outside catering)**
+
+| Cost Component | Estimate |
+|----------------|----------|
+| F&B (250 x $175) | $43,750 |
+| Service Charge (22%) | $9,625 |
+| Sales Tax (7%) | $3,736 |
+| Venue/Extras | $10,000-18,000 |
+| Decor/Photography | $12,000-20,000 |
+| **TOTAL** | **$75,000 - $95,000** |
+
+**Luxury/Wow Factor: 6.5/10**
+- Boutique hotel feel
+- Coral Gables location
+- Good quality, smaller scale
+- Modern amenities
+
+**Pros:** BEST Florida per-person pricing, potentially flexible on catering
+**Cons:** Not as prestigious as Ritz/Four Seasons, smaller venue
+**Value Score: 8.5** - Excellent value if quality meets expectations
+
+---
+
+### 12. Naples Beach Club Four Seasons
+**Status: Inquiry submitted 1/31 | Estimated: ~$375/pp**
+
+| Cost Component | Estimate |
+|----------------|----------|
+| F&B (250 x $375) | $93,750 |
+| Service Charge (~24%) | $22,500 |
+| Sales Tax (7%) | $8,138 |
+| Venue/Extras | $10,000-20,000 |
+| Decor/Photography | $15,000-25,000 |
+| **TOTAL** | **$145,000 - $180,000** |
+
+**Luxury/Wow Factor: 9.5/10**
+- Brand NEW Four Seasons (opened Nov 2025)
+- 1,000-foot stretch of Gulf beach
+- 125-acre resort
+- Ultimate luxury brand
+- James Beard Award-winning chef
+
+**Pros:** Brand new Four Seasons luxury, Gulf coast, pristine facilities
+**Cons:** New property (no wedding track record), very premium pricing, peak rates ~$1,600/night
+**Value Score: 5.8** - Exceptional luxury but at ultra-premium price
+
+---
+
+### 13. The Ritz-Carlton Naples
+**Quoted: $345-375/pp (weekend/weekday)**
+
+| Cost Component | Estimate |
+|----------------|----------|
+| F&B (250 x $360 avg) | $90,000 |
+| Service Charge (22%) | $19,800 |
+| Sales Tax (7%) | $7,686 |
+| Venue/Extras | $10,000-20,000 |
+| Decor/Photography | $15,000-25,000 |
+| **TOTAL** | **$140,000 - $170,000** |
+
+**Luxury/Wow Factor: 8.5/10**
+- Ritz-Carlton brand
+- Gulf coast location
+- Established luxury property
+- All-inclusive packages available
+
+**Pros:** Ritz service quality, Gulf beaches, all-inclusive options
+**Cons:** Premium pricing, similar to other Ritz properties
+**Value Score: 6.2** - Quality guaranteed but premium priced
+
+---
+
+### 14. Eau Palm Beach Resort & Spa
+**Quoted: $145K F&B Minimum = $580/pp**
+
+| Cost Component | Estimate |
+|----------------|----------|
+| F&B Minimum | $145,000 |
+| Service Charge (22%) | $31,900 |
+| Sales Tax (7%) | $12,383 |
+| Venue/Extras | $10,000-20,000 |
+| Decor/Photography | $15,000-25,000 |
+| **TOTAL** | **$210,000 - $240,000** |
+
+**Luxury/Wow Factor: 8.0/10**
+- Palm Beach luxury
+- Forbes Four Star
+- Beautiful oceanfront
+- High-end clientele
+
+**Pros:** Palm Beach prestige, beautiful property
+**Cons:** $145K minimum makes this VERY expensive for 250 guests
+**Value Score: 4.0** - Worst value due to excessive minimum
 
 ---
 
@@ -213,553 +401,333 @@ After extensive research across 10 luxury wedding venues (4 in Florida, 6 in Mex
 
 ---
 
-### 5. NIZUC Resort & Spa, Cancun
+### 15. Grand Velas Riviera Maya
+**Quoted: $110/pp, $670/night room rate - All Inclusive**
 
-**Property Overview:**
-- Forbes Travel Guide Five-Star Resort and Spa
-- Hotel of the Year 2024 (Mexico, Central & South America)
-- 274 luxury suites and private villas
-- 7 wedding venues, 6 restaurants, ESPA spa (30,000 sq ft)
-- European Plan (not all-inclusive)
+| Cost Component | Estimate |
+|----------------|----------|
+| Wedding Package Base (30 guests) | $3,500 |
+| Additional Guests (220 x $110) | $24,200 |
+| Venue Upgrades | $5,000-10,000 |
+| Enhanced Decor | $10,000-20,000 |
+| Photography/Video | $6,000-12,000 |
+| Entertainment | $3,000-8,000 |
+| Day Passes (non-staying) | $2,500-5,000 |
+| **WEDDING TOTAL** | **$60,000 - $95,000** |
 
-**Estimated Costs for 250 Guests:**
+*Room requirement: 80% of guests stay minimum 2 nights at $670/night - typically paid by guests*
 
-| Category | Estimated Cost |
-|----------|----------------|
-| Venue Rental/Minimum F&B | $25,000-$40,000 |
-| Dinner Reception (250 × $200) | $50,000 |
-| Cocktail Hour (250 × $75) | $18,750 |
-| Bar Service (250 × $100) | $25,000 |
-| Ceremony Setup | $5,000-$8,000 |
-| Floral & Décor | $15,000-$30,000 |
-| Photography/Video | $8,000-$15,000 |
-| DJ/Entertainment | $4,000-$8,000 |
-| Wedding Cake | $2,000-$4,000 |
-| Wedding Planner (required) | $8,000-$15,000 |
-| Couple's Accommodation (5 nights) | $5,000-$8,000 |
-| **TOTAL ESTIMATED** | **$165,000 - $220,000** |
-
-**Luxury Rating:** ★★★★★ (5/5)
-- Forbes Five-Star resort and spa
-- Ultra-luxury positioning
-- World-class dining (CANIRAC Best Hotel Restaurant)
-- 29-acre natural preserve setting
-- Exceptional service reviews
-
-**Pros:**
-- Highest luxury tier in region
-- Completely bespoke weddings (no packages)
-- Multiple stunning venue options
-- 15 minutes from Cancun airport
-- "Best resort our guests ever attended" reviews
-- No other weddings same day guarantee
-
-**Cons:**
-- Most expensive Mexico option
-- Not all-inclusive (costs add up quickly)
-- 50% of guests must stay 3 nights minimum
-- Complex planning without wedding packages
-- Weather/seaweed concerns possible
-
----
-
-### 6. Grand Velas Riviera Maya
-
-**Property Overview:**
-- AAA Five Diamond All-Inclusive Resort
-- Forbes Travel Guide Four Star
-- 539 suites (all 1,100+ sq ft)
-- 8 restaurants (including AAA Five Diamond Cocina de Autor)
+**Luxury/Wow Factor: 8.5/10**
+- AAA Five Diamond All-Inclusive
+- Forbes Four Star
+- 1,100+ sq ft suites
+- 8 restaurants (including Five Diamond Cocina de Autor)
 - 90,000 sq ft spa
-- Only one wedding per day
+- One wedding per day
 
-**Estimated Costs for 250 Guests:**
-
-| Category | Estimated Cost |
-|----------|----------------|
-| Wedding Package (base 30 guests) | $3,500 |
-| Additional 220 guests × $110 | $24,200 |
-| Venue Rental Upgrade | $5,000-$10,000 |
-| Enhanced Décor & Florals | $10,000-$20,000 |
-| Photography/Video | $6,000-$12,000 |
-| Live Entertainment | $3,000-$8,000 |
-| Wedding Cake Upgrade | $1,000-$2,500 |
-| Wedding Coordinator Enhancement | $2,000-$5,000 |
-| Day Passes (non-staying guests) | $2,500-$5,000 |
-| **TOTAL ESTIMATED** | **$60,000 - $95,000** |
-
-*Note: This assumes most F&B is covered by all-inclusive rates for staying guests*
-
-**Luxury Rating:** ★★★★★ (5/5)
-- AAA Five Diamond property
-- Most awarded all-inclusive in Mexico
-- Michelin-quality dining included
-- Leading Spa of the World designation
-
-**Pros:**
-- **Best value for luxury** - all-inclusive dramatically reduces costs
-- AAA Five Diamond dining included
-- One wedding per day exclusivity
-- 8 venue options
-- World-class spa included
-- Outstanding guest reviews (9.6/10)
-
-**Cons:**
-- 80% of guests must stay (minimum 2 nights)
-- 10% non-refundable deposit required
-- Blackout dates (spring break, holidays)
-- Suites start at $642/person/night (guest cost consideration)
+**Pros:** Best luxury-to-value ratio, all-inclusive simplifies planning, world-class dining included, exclusivity (one wedding/day)
+**Cons:** 80% guest stay requirement, guests pay ~$1,340+ for 2-night minimum, blackout dates
+**Value Score: 9.5** - BEST OVERALL VALUE
 
 ---
 
-### 7. Waldorf Astoria Riviera Maya (Cancun)
+### 16. Hotel Xcaret Arte
+**Quoted: $16,750 for 30 guests + $190/additional = ~$58,550**
 
-**Property Overview:**
-- Waldorf Astoria luxury brand
-- 173 oceanfront rooms and suites
-- Set in enchanting mangrove reserve
-- 100-acre beachfront property
-- European Plan (not all-inclusive)
+| Cost Component | Estimate |
+|----------------|----------|
+| Base Package (30 guests) | $16,750 |
+| Additional Guests (220 x $190) | $41,800 |
+| Legal Ceremony Add-on | $1,000 |
+| Enhanced Decor | $8,000-15,000 |
+| Photography/Video | $6,000-12,000 |
+| Entertainment | $2,000-5,000 |
+| **TOTAL** | **$75,000 - $100,000** |
 
-**Estimated Costs for 250 Guests:**
-
-| Category | Estimated Cost |
-|----------|----------------|
-| Venue Rental/Minimum F&B | $30,000-$50,000 |
-| Dinner Reception (250 × $200) | $50,000 |
-| Cocktail Hour (250 × $80) | $20,000 |
-| Bar Service (250 × $100) | $25,000 |
-| Ceremony Setup | $5,000-$10,000 |
-| Floral & Décor | $12,000-$25,000 |
-| Photography/Video | $8,000-$15,000 |
-| DJ/Entertainment | $4,000-$8,000 |
-| Wedding Cake | $2,000-$4,000 |
-| Service Charge & Tax (~30%) | $30,000-$45,000 |
-| **TOTAL ESTIMATED** | **$185,000 - $250,000** |
-
-**Luxury Rating:** ★★★★★ (5/5)
-- Waldorf Astoria brand prestige
-- Impeccable service reviews
-- Stunning mangrove setting
-- Secluded yet accessible (15 min from airport)
-
-**Pros:**
-- Elite Waldorf Astoria service and brand
-- Unique mangrove preserve setting
-- Dedicated Celebrations Concierge
-- Multiple ceremony types (symbolic, Mayan, legal)
-- Excellent service reviews
-- Less crowded than Hotel Zone
-
-**Cons:**
-- European Plan means all F&B is additional
-- Very high-end pricing
-- 15-20% service charge on top of prices
-- Suite rates can exceed $10,000/night in peak season
-- Limited to 173 rooms (capacity constraint for 250 guests)
-
----
-
-### 8. Hotel Xcaret Arte
-
-**Property Overview:**
-- Adults-only all-inclusive (All-Fun Inclusive)
-- Includes unlimited access to 8 Xcaret parks
+**Luxury/Wow Factor: 8.0/10**
+- Adults-only All-Fun Inclusive
+- Unlimited access to 8 Xcaret parks
 - Airport transfers included
 - 9 wedding venues
-- Ecumenical chapel available
+- Unique eco-luxury concept
 
-**Estimated Costs for 250 Guests:**
-
-| Category | Estimated Cost |
-|----------|----------------|
-| Paraíso Wedding Package (30 guests) | $16,750 |
-| Additional 220 guests × $190 | $41,800 |
-| Legal Ceremony Add-on | $1,000 |
-| Ecumenical Chapel Rental | $1,900 |
-| Enhanced Florals & Décor | $8,000-$15,000 |
-| Photography/Video | $6,000-$12,000 |
-| Additional Entertainment | $2,000-$5,000 |
-| Off-site Guest Passes (if needed) | $90/person |
-| Outside Vendor Fees | $1,000-$3,000 |
-| **TOTAL ESTIMATED** | **$80,000 - $110,000** |
-
-**Luxury Rating:** ★★★★☆ (4/5)
-- High-end all-inclusive concept
-- Unique cultural immersion experience
-- Modern, artistic design
-- Excellent food reviews
-
-**Pros:**
-- **Excellent value** for all-inclusive luxury
-- Park access adds unique guest experience
-- Lower room block requirement (11 rooms)
-- Airport transfers included
-- Multiple stunning venue options
-- Adults-only for sophisticated atmosphere
-
-**Cons:**
-- 80% of guests must stay minimum 3 nights
-- Saturday weddings require 25+ room block
-- Service inconsistencies noted in reviews
-- Large property requires lots of walking
-- Rocky beach, potential seaweed issues
-- Limited nightlife options
+**Pros:** Excellent value, park access creates memorable experience, lower room requirements (11 rooms)
+**Cons:** 80% guests must stay 3 nights, service inconsistencies noted, rocky beach
+**Value Score: 8.8** - Excellent value with unique guest experience
 
 ---
 
-### 9. Fairmont Mayakoba
+### 17. Waldorf Astoria Cancun
+**Status: Inquiry submitted 1/31 | Estimated: ~$300-400/pp (European Plan)**
 
-**Property Overview:**
-- AAA Five Diamond Resort
-- Set within private 240-acre gated community
-- Nestled among canals and mangroves
-- Only 20 weddings hosted per year
-- World-class golf course on-site
+| Cost Component | Estimate |
+|----------------|----------|
+| Venue Rental/F&B Minimum | $30,000-50,000 |
+| Dinner (250 x $200) | $50,000 |
+| Cocktails (250 x $80) | $20,000 |
+| Bar Service (250 x $100) | $25,000 |
+| Service/Tax (~30%) | $35,000-45,000 |
+| Decor/Extras | $15,000-30,000 |
+| **TOTAL** | **$150,000 - $200,000** |
 
-**Estimated Costs for 250 Guests:**
+**Luxury/Wow Factor: 9.0/10**
+- Waldorf Astoria prestige
+- 100-acre beachfront property
+- Mangrove reserve setting
+- 173 oceanfront rooms
+- Elite service reputation
 
-| Category | Estimated Cost |
-|----------|----------------|
-| Base Wedding Package (30 guests) | $9,800 |
-| Venue Rental/Privatization | $7,500-$15,000 |
-| Outdoor Venue Setup (250 × $12) | $3,000 |
-| Catering (250 × $175 avg) | $43,750 |
-| Bar Service (250 × $85) | $21,250 |
-| Service Charge & Tax (~25%) | $17,000 |
-| Floral & Décor | $12,000-$25,000 |
-| Photography/Video | $8,000-$15,000 |
-| Entertainment | $4,000-$8,000 |
-| Wedding Planner | $5,000-$10,000 |
-| **TOTAL ESTIMATED** | **$135,000 - $175,000** |
-
-**Luxury Rating:** ★★★★★ (5/5)
-- AAA Five Diamond
-- Most exclusive feel (only 20 weddings/year)
-- Stunning natural setting
-- Exceptional personalized service
-
-**Pros:**
-- **Most exclusive** - only 20 weddings per year
-- Unique mangrove and canal setting
-- Full attention to each wedding
-- AAA Five Diamond service
-- Beach and garden venues (up to 400 guests)
-- Excellent reviews from wedding couples
-
-**Cons:**
-- 90% of guests must stay (minimum 3 nights, 8 rooms)
-- Blackout dates (Dec 18 - Jan 4)
-- Higher base costs than some competitors
-- Requires external wedding planner
-- All F&B provided exclusively by resort
+**Pros:** Waldorf brand prestige, stunning setting, dedicated wedding concierge
+**Cons:** European Plan (all F&B extra), high-end pricing, room capacity constraint (173 rooms)
+**Value Score: 5.3** - Beautiful but premium priced
 
 ---
 
-### 10. Conrad Tulum Riviera Maya
+### 18. JW Marriott Cancun Resort & Spa
+**Status: Inquiry submitted 1/31 | Estimated: ~$200-250/pp**
 
-**Property Overview:**
-- Hilton luxury brand
-- 349 rooms with ocean views
-- 12 wedding venue options
-- 7 restaurants, 2 bars
-- 5 pools, 16-room spa
-- European Plan (not all-inclusive)
+| Cost Component | Estimate |
+|----------------|----------|
+| Estimated F&B (250 x $225) | $56,250 |
+| Service/Tax (~25%) | $14,000 |
+| Venue/Setup | $5,000-15,000 |
+| Decor/Extras | $10,000-20,000 |
+| **TOTAL** | **$80,000 - $120,000** |
 
-**Estimated Costs for 250 Guests:**
+**Luxury/Wow Factor: 7.5/10**
+- JW Marriott luxury tier
+- Beachfront Hotel Zone location
+- 20,000+ sq ft event space
+- 447 guest rooms
+- Mayan-inspired spa
 
-| Category | Estimated Cost |
-|----------|----------------|
-| Romantic Party Package (30 guests) | $32,000 |
-| Additional 220 guests × $580 | $127,600 |
-| Venue Fees | $5,000-$10,000 |
-| Enhanced Décor | $8,000-$15,000 |
-| Photography/Video | $6,000-$12,000 |
-| Additional Entertainment | $3,000-$6,000 |
-| **TOTAL ESTIMATED** | **$185,000 - $210,000** |
-
-*Alternative: Boutique Celebration Package*
-| Category | Estimated Cost |
-|----------|----------------|
-| Base Package (30 guests) | $23,300 |
-| Additional 220 guests × $510 | $112,200 |
-| Venue Fees | $5,000-$10,000 |
-| Enhancements | $15,000-$25,000 |
-| **TOTAL ESTIMATED** | **$160,000 - $185,000** |
-
-**Luxury Rating:** ★★★★☆ (4.5/5)
-- Condé Nast Traveler Hot List 2022
-- Modern luxury design
-- Excellent service reputation
-- 9/10 ratings
-
-**Pros:**
-- Stunning modern design
-- Excellent service reviews
-- 12 versatile venue options
-- Large capacity venues (up to 400 guests)
-- 2025 booking: 10% discount on packages
-- Comprehensive package inclusions
-
-**Cons:**
-- European Plan adds significant cost
-- Per-additional-guest pricing is high ($510-$580)
-- 1 hour 15 minutes from Cancun airport
-- Some service inconsistency reports
-- Rocky beach, seaweed concerns
-- Newer property still refining operations
+**Pros:** Good value for luxury tier, ample capacity, established property
+**Cons:** Hotel Zone location (busier area), standard resort feel
+**Value Score: 7.8** - Solid Mexico option at moderate pricing
 
 ---
 
-## Part 2: Value Analysis
+### 19. Nizuc Resort & Spa
+**Status: Inquiry submitted 1/31 | Estimated: ~$600-800/pp (European Plan, no packages)**
 
-### Methodology
+| Cost Component | Estimate |
+|----------------|----------|
+| Venue/F&B Minimum | $25,000-40,000 |
+| Dinner (250 x $200) | $50,000 |
+| Cocktails (250 x $75) | $18,750 |
+| Bar Service (250 x $100) | $25,000 |
+| Ceremony Setup | $5,000-8,000 |
+| Decor/Florals | $15,000-30,000 |
+| Photography/Video | $8,000-15,000 |
+| Wedding Planner (required) | $8,000-15,000 |
+| **TOTAL** | **$150,000 - $200,000** |
 
-Value Score = (Luxury Rating × Experience Quality × Guest Capacity Fit) / Total Cost
+*Additional requirement: 50% of guests must stay 3 nights (rooms $340-795/night)*
 
-Factors considered:
-1. **Cost Efficiency**: Total estimated cost relative to budget
-2. **Luxury Level**: Property ratings, awards, and prestige
-3. **Service Quality**: Review scores and wedding-specific feedback
-4. **Guest Experience**: What guests receive for their travel investment
-5. **Capacity Fit**: How well venue handles 250 guests
-6. **Uniqueness**: Memorable, distinctive experience offered
+**Luxury/Wow Factor: 9.5/10**
+- Forbes Five-Star Resort AND Spa
+- Hotel of the Year 2024 (Mexico region)
+- 274 luxury suites
+- 7 wedding venues
+- 29-acre natural preserve
+- Completely bespoke weddings
 
----
-
-### Value Scoring Matrix
-
-| Venue | Est. Cost (Mid) | Luxury (5) | Service (5) | Guest Exp (5) | Capacity (5) | Unique (5) | **VALUE SCORE** |
-|-------|-----------------|------------|-------------|---------------|--------------|------------|-----------------|
-| Grand Velas Riviera Maya | $77,500 | 5.0 | 4.8 | 5.0 | 4.0 | 4.0 | **9.5** |
-| Hotel Xcaret Arte | $95,000 | 4.0 | 4.0 | 4.8 | 4.5 | 4.5 | **8.8** |
-| The Diplomat Beach Resort | $130,000 | 4.0 | 4.2 | 4.0 | 5.0 | 3.5 | **8.2** |
-| Fairmont Mayakoba | $155,000 | 5.0 | 4.8 | 4.5 | 4.0 | 4.5 | **7.8** |
-| Ritz-Carlton Fort Lauderdale | $155,000 | 5.0 | 4.9 | 4.3 | 4.5 | 3.5 | **7.5** |
-| Omni Fort Lauderdale | $142,500 | 4.0 | N/A | 4.0 | 5.0 | 4.0 | **7.3** |
-| Conrad Tulum | $172,500 | 4.5 | 4.3 | 4.2 | 4.5 | 4.0 | **6.8** |
-| Vizcaya Museum | $177,500 | 5.0 | 4.5 | 4.5 | 3.5 | 5.0 | **6.5** |
-| NIZUC Resort & Spa | $192,500 | 5.0 | 4.9 | 5.0 | 3.5 | 4.5 | **6.3** |
-| Waldorf Astoria Riviera Maya | $217,500 | 5.0 | 4.8 | 4.5 | 3.5 | 4.5 | **5.8** |
+**Pros:** Highest luxury tier in Mexico, fully customized weddings, one wedding/day guarantee
+**Cons:** Most expensive Mexico option, European Plan, complex bespoke planning, 50% guest stay requirement
+**Value Score: 5.5** - Ultra-luxury at ultra-premium price
 
 ---
 
-## Part 3: Final Rankings & Recommendations
+## Part 2: Value Methodology
 
-### Overall Best Value Rankings
+### How Value Scores Were Calculated
 
-#### 🥇 #1: Grand Velas Riviera Maya
-**Estimated Cost: $60,000 - $95,000**
+**Value Score = (Luxury/Wow Factor) x 10 / (Estimated Cost / $10,000)**
+
+Factors in Luxury/Wow Score:
+1. **Brand Prestige** (Ritz-Carlton, Four Seasons, Waldorf = highest)
+2. **Uniqueness** (Historic venues, one-of-a-kind settings)
+3. **Physical Beauty** (Architecture, views, grounds)
+4. **Service Reputation** (Reviews, awards, track record)
+5. **Guest Experience** (What do guests get for their travel?)
+6. **Awards/Ratings** (Forbes, AAA Diamond, etc.)
+
+### Value Tiers
+
+**EXCEPTIONAL VALUE (Score 8.0+):**
+- Grand Velas Riviera Maya (9.5)
+- Hotel Xcaret Arte (8.8)
+- Loews Coral Gables (8.5)
+- Henry Morrison Flagler Museum (8.2)
+- Ritz Carlton Fort Lauderdale (8.0)
+
+**GOOD VALUE (Score 7.0-7.9):**
+- JW Marriott Cancun (7.8)
+- Diplomat Beach Hollywood (7.5)
+- Fort Lauderdale Marriott Harbor Beach (7.3)
+- JW Marriott Marco Island (7.2)
+- Omni Fort Lauderdale (7.0)
+
+**MODERATE VALUE (Score 5.5-6.9):**
+- Vizcaya Museum (6.8)
+- The Biltmore Hotel (6.5)
+- Ritz-Carlton Naples (6.2)
+- Ritz-Carlton Key Biscayne (6.0)
+- Naples Beach Club Four Seasons (5.8)
+- Nizuc (5.5)
+
+**LOWER VALUE (Score below 5.5):**
+- Waldorf Astoria Cancun (5.3)
+- Fontainebleau Miami Beach (4.8)
+- Eau Palm Beach (4.0)
+
+---
+
+## Part 3: Final Ranked Recommendations
+
+### TOP TIER: Best Value-for-Luxury
+
+#### #1: Grand Velas Riviera Maya
+**$60,000 - $95,000 | Value Score: 9.5**
 
 **Why It's #1:**
-- AAA Five Diamond all-inclusive eliminates most hidden costs
-- Michelin-quality dining INCLUDED for all staying guests
-- Only one wedding per day (exclusivity)
-- 90,000 sq ft world-class spa for guest experience
-- 9.6/10 guest satisfaction rating
-- **Saves $60,000-$150,000 vs. comparable luxury venues**
+Five Diamond luxury at fraction of comparable pricing. All-inclusive means no F&B surprises. One wedding per day exclusivity. World-class dining and spa included for guests. 9.6/10 guest satisfaction.
 
-**Best For:** Couples who want top-tier luxury without top-tier pricing, and whose guests can commit to all-inclusive stay.
+**Best For:** Couples who want Five Diamond luxury without Five Diamond prices, and whose guests can commit to the all-inclusive stay requirement.
 
 ---
 
-#### 🥈 #2: Hotel Xcaret Arte
-**Estimated Cost: $80,000 - $110,000**
+#### #2: Hotel Xcaret Arte
+**$75,000 - $100,000 | Value Score: 8.8**
 
 **Why It's #2:**
-- Unique all-inclusive concept with park access
-- Lower room block requirements (11 rooms minimum)
-- Excellent value for the experience offered
-- Airport transfers included
-- Adults-only sophisticated atmosphere
-- Cultural immersion opportunities for guests
+Unique value proposition with park access creating memorable guest experience. Lower room requirements than competitors. Adults-only sophistication. Airport transfers included.
 
-**Best For:** Couples wanting a unique, experience-rich destination wedding with activities for guests.
+**Best For:** Couples wanting a unique destination wedding with built-in guest activities and entertainment.
 
 ---
 
-#### 🥉 #3: The Diplomat Beach Resort
-**Estimated Cost: $110,000 - $150,000**
+#### #3: Loews Coral Gables
+**$75,000 - $95,000 | Value Score: 8.5**
 
 **Why It's #3:**
-- Best value among Florida venues
-- Largest ballroom capacity (handles 250 easily)
-- Strong wedding reviews and experienced team
-- 2025 promotional pricing available
-- No passport/travel complications for U.S. guests
-- AAA Four Diamond quality
+Best per-person pricing in Florida at $175/pp. Solid quality at exceptional price. No passport/travel complications.
 
-**Best For:** Couples who prefer a U.S. venue with proven wedding track record and don't want to ask guests to travel internationally.
+**CRITICAL:** Verify outside catering policy before committing.
+
+**Best For:** Couples prioritizing budget efficiency while staying in Florida.
 
 ---
 
-#### #4: Fairmont Mayakoba
-**Estimated Cost: $135,000 - $175,000**
+#### #4: Henry Morrison Flagler Museum
+**$110,000 - $140,000 | Value Score: 8.2**
 
-**Why It Ranks Here:**
-- Most exclusive experience (only 20 weddings/year)
-- AAA Five Diamond with personalized attention
-- Unique mangrove setting
-- Excellent reviews from wedding couples
-- Worth the premium for exclusivity-focused couples
+**Why It's #4:**
+One-of-a-kind venue you literally cannot replicate anywhere else. Gilded Age mansion provides extraordinary backdrop. Historic prestige adds gravitas.
 
-**Best For:** Couples who prioritize exclusivity and personalized attention over cost savings.
+**Best For:** Couples who want a truly unique, historically significant venue and can manage the logistics complexity.
 
 ---
 
-#### #5: Ritz-Carlton Fort Lauderdale
-**Estimated Cost: $135,000 - $175,000**
+#### #5: Ritz Carlton Fort Lauderdale
+**$95,000 - $115,000 | Value Score: 8.0**
 
-**Why It Ranks Here:**
-- Unmatched brand prestige and service reputation
-- Five Diamond, best-in-class execution
-- Convenient for U.S. guests
-- Outstanding food reviews
-- Peak season premium (March)
+**Why It's #5:**
+Best combination of brand prestige and reasonable pricing in Florida. $239/pp is competitive for Ritz-Carlton. Excellent service guaranteed.
 
-**Best For:** Couples prioritizing brand prestige, proven excellence, and guest convenience over cost optimization.
+**Best For:** Couples who want Ritz-Carlton quality without breaking the bank.
 
 ---
 
-#### #6: Omni Fort Lauderdale
-**Estimated Cost: $120,000 - $165,000**
+### MID TIER: Good Value
 
-**Why It Ranks Here:**
-- Brand new property (pristine condition)
-- Massive venue capacity
-- Competitive pricing expected for new property
-- Risk: No wedding track record yet
+#### #6: JW Marriott Cancun
+**$80,000 - $120,000 | Value Score: 7.8**
 
-**Best For:** Couples comfortable being early adopters who want a modern, spacious venue at competitive pricing.
+Solid luxury resort at competitive Mexico pricing. Good capacity and established operations.
 
 ---
 
-#### #7: Conrad Tulum
-**Estimated Cost: $160,000 - $210,000**
+#### #7: Diplomat Beach Hollywood
+**$100,000 - $130,000 | Value Score: 7.5**
 
-**Why It Ranks Here:**
-- Beautiful modern property
-- Good service reviews
-- Per-guest pricing makes 250 guests expensive
-- European Plan adds complexity
-
-**Best For:** Couples who love the Tulum vibe and modern design, with flexibility on budget.
+Largest ballroom in South Florida. Strong wedding track record. 2025 promotional pricing available.
 
 ---
 
-#### #8: Vizcaya Museum & Gardens
-**Estimated Cost: $160,000 - $195,000**
+#### #8-10: Marriott Properties
+- **Fort Lauderdale Marriott Harbor Beach** ($100-125K)
+- **JW Marriott Marco Island** ($110-135K)
+- **Omni Fort Lauderdale** ($105-130K)
 
-**Why It Ranks Here:**
-- Absolutely unique, iconic venue
-- Unparalleled photo opportunities
-- Complex logistics (approved vendors, no on-site rooms, tenting required)
-- Premium pricing for the privilege
-
-**Best For:** Couples who want a one-of-a-kind, historic venue and are willing to manage complex logistics.
+Solid resort options with good service but less distinctive.
 
 ---
 
-#### #9: NIZUC Resort & Spa
-**Estimated Cost: $165,000 - $220,000**
+### SPECIAL CASES: Premium Venues
 
-**Why It Ranks Here:**
-- Highest luxury tier in Mexico
-- Forbes Five-Star everything
-- Premium pricing reflects ultra-luxury positioning
-- Complex bespoke planning process
+#### Vizcaya Museum ($130-160K | Value: 6.8)
+**Highest wow factor (10/10)** but logistically complex. Worth it only if the unique historic venue is your priority.
 
-**Best For:** Couples for whom "the absolute best" matters more than value, and who want complete customization.
+#### The Biltmore Hotel ($115-140K | Value: 6.5)
+Iconic historic hotel. Worth consideration if Spanish/Mediterranean architecture appeals.
 
----
+#### Ritz-Carlton Naples / Key Biscayne ($140-170K | Value: 6.0-6.2)
+Premium Ritz pricing. Consider only if specific location is important.
 
-#### #10: Waldorf Astoria Riviera Maya
-**Estimated Cost: $185,000 - $250,000**
+#### Naples Beach Club Four Seasons ($145-180K | Value: 5.8)
+Brand new ultra-luxury. Worth it for Four Seasons devotees who want newest property.
 
-**Why It Ranks Here:**
-- Elite Waldorf service and prestige
-- Beautiful setting
-- European Plan + 250 guests = highest total cost
-- Room capacity constraints (173 rooms)
-
-**Best For:** Waldorf brand loyalists who prioritize service prestige above all else.
+#### Nizuc ($150-200K | Value: 5.5)
+Ultra-luxury boutique. Worth it only for couples who want absolute best regardless of cost.
 
 ---
 
-## Final Recommendations by Scenario
+### NOT RECOMMENDED (Value Perspective)
 
-### If maximizing value is priority:
-→ **Grand Velas Riviera Maya** ($60K-$95K)
-- Save $100K+ while maintaining Five Diamond luxury
+#### Fontainebleau Miami Beach ($190-225K | Value: 4.8)
+The $150K minimum makes this poor value for 250 guests. Iconic but overpriced.
 
-### If you want unique guest experience:
-→ **Hotel Xcaret Arte** ($80K-$110K)
-- Park access creates memorable destination wedding
+#### Eau Palm Beach ($210-240K | Value: 4.0)
+$145K minimum = $580/pp effective cost. Cannot recommend at this price point.
 
-### If U.S. venue preferred:
-→ **The Diplomat Beach Resort** ($110K-$150K)
-- Best Florida value, proven track record
-
-### If exclusivity matters most:
-→ **Fairmont Mayakoba** ($135K-$175K)
-- Only 20 weddings/year, full attention guaranteed
-
-### If brand prestige matters most:
-→ **Ritz-Carlton Fort Lauderdale** ($135K-$175K)
-- Unmatched reputation and service
-
-### If historic/unique venue preferred:
-→ **Vizcaya Museum & Gardens** ($160K-$195K)
-- One-of-a-kind, but logistically complex
-
-### If absolute ultra-luxury required:
-→ **NIZUC Resort & Spa** ($165K-$220K)
-- Forbes Five-Star, fully bespoke experience
+#### Waldorf Astoria Cancun ($150-200K | Value: 5.3)
+European Plan + Waldorf pricing = expensive. Better options available.
 
 ---
 
-## Budget Summary
+## Summary: Quick Decision Guide
 
-With a **$250,000 budget**, you have flexibility with ALL venues analyzed:
-
-| Venue | Est. Cost | Under Budget By |
-|-------|-----------|-----------------|
-| Grand Velas Riviera Maya | $77,500 | **$172,500** |
-| Hotel Xcaret Arte | $95,000 | **$155,000** |
-| The Diplomat | $130,000 | **$120,000** |
-| Fairmont Mayakoba | $155,000 | **$95,000** |
-| Ritz-Carlton Fort Lauderdale | $155,000 | **$95,000** |
-| Omni Fort Lauderdale | $142,500 | **$107,500** |
-| Conrad Tulum | $172,500 | **$77,500** |
-| Vizcaya Museum | $177,500 | **$72,500** |
-| NIZUC Resort & Spa | $192,500 | **$57,500** |
-| Waldorf Astoria Riviera Maya | $217,500 | **$32,500** |
+| If You Want... | Choose... | Budget |
+|----------------|-----------|--------|
+| **Best overall value** | Grand Velas Riviera Maya | $60-95K |
+| **Unique guest experience** | Hotel Xcaret Arte | $75-100K |
+| **Best Florida value** | Loews Coral Gables | $75-95K |
+| **Historic uniqueness** | Flagler Museum | $110-140K |
+| **Ritz brand + value** | Ritz Carlton Fort Lauderdale | $95-115K |
+| **Largest ballroom** | Diplomat Beach Hollywood | $100-130K |
+| **Gulf coast + luxury** | Ritz-Carlton Naples | $140-170K |
+| **Highest wow factor** | Vizcaya Museum | $130-160K |
+| **Ultra-luxury Mexico** | Nizuc | $150-200K |
+| **New Four Seasons** | Naples Beach Club | $145-180K |
 
 ---
 
-## Sources Consulted
+## Pending Items / Next Steps
 
-### Florida Venues:
-- The Knot, WeddingWire venue listings
-- Here Comes the Guide
-- Official resort websites
-- Vizcaya.org official pricing
-- Carats and Cake venue profiles
-- Real wedding testimonials
-
-### Mexico Venues:
-- ParadiseWeddings.com
-- PlayaDelCarmen.com wedding reviews
-- Yellow Umbrella Events wedding guides
-- Destify destination wedding platform
-- Official resort wedding portals
-- Forbes Travel Guide ratings
-- AAA Diamond ratings
-- TripAdvisor reviews
-- Booking.com verified reviews
+1. **Loews Coral Gables** - Confirm outside catering policy
+2. **Naples Beach Club Four Seasons** - Await quote (inquiry 1/31)
+3. **Ritz-Carlton Naples** - Await quote (inquiry 1/31)
+4. **Fort Lauderdale Marriott Harbor Beach** - Confirm with Raj on catering
+5. **JW Marriott Marco Island** - Follow up on unresponsive inquiry
+6. **Waldorf Astoria Cancun** - Await quote (inquiry 1/31)
+7. **JW Marriott Cancun** - Await quote (inquiry 1/31)
+8. **Nizuc** - Await quote (inquiry 1/31)
+9. **Hotel Xcaret Arte** - Await quote (inquiry 1/31)
 
 ---
 
-*Analysis completed January 2026 for March 2027 wedding planning*
-*Prices are estimates based on publicly available information and subject to change*
+*Analysis completed January 2026*
+*All prices are estimates based on quoted rates and research*
 *Final quotes should be obtained directly from venues*
+*Service charges and taxes vary and should be confirmed*
