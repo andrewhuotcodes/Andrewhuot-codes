@@ -2,6 +2,11 @@
 
 ## A Comprehensive Beginner's Guide
 
+> **This guide has been expanded into a full project with runnable scripts.** See the [`ccai-sentiment-analysis/`](./ccai-sentiment-analysis/) directory for:
+> - **[GETTING_STARTED.md](./ccai-sentiment-analysis/GETTING_STARTED.md)** — Zero-to-hero walkthrough for absolute beginners
+> - **[README.md](./ccai-sentiment-analysis/README.md)** — Full reference with 5 methods and all code files
+> - Runnable scripts for curl, Python, DevKit, and BigQuery approaches
+
 This guide walks you through performing **turn-by-turn sentiment analysis** on contact center conversations using **Google Cloud Customer Experience Insights** (formerly CCAI Insights / Conversational Insights). You will learn multiple ways to achieve this — from the Google Cloud Console UI, to the REST API with `curl`, to the Python client library.
 
 ---

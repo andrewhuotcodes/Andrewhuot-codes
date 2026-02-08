@@ -7,10 +7,34 @@
 #   Sets up everything you need before running any of the 5 methods.
 #   Run this ONCE before trying any of the analysis methods.
 #
-# HOW TO RUN:
-#   1. Open a terminal (or Google Cloud Shell)
-#   2. Edit the variables below (PROJECT_ID, BUCKET_NAME)
-#   3. Run: chmod +x 00_setup.sh && ./00_setup.sh
+# HOW TO RUN (recommended: use Google Cloud Shell):
+#
+#   1. Go to https://console.cloud.google.com
+#   2. Click the ">_" icon (top-right) to open Cloud Shell
+#   3. Upload this project's files or clone the repo into Cloud Shell
+#   4. Edit the 2 variables below — here are 3 ways to do it:
+#
+#      EASIEST — run these two commands (replace the values):
+#        sed -i 's/your-project-id/MY-ACTUAL-PROJECT-ID/g' 00_setup.sh
+#        sed -i 's/your-bucket-name/my-unique-bucket-12345/g' 00_setup.sh
+#
+#      OR — use the Cloud Shell editor:
+#        cloudshell edit 00_setup.sh
+#        (change the two values, then save with Ctrl+S)
+#
+#      OR — use nano (terminal text editor):
+#        nano 00_setup.sh
+#        (change the values, save with Ctrl+O, exit with Ctrl+X)
+#
+#   5. Run it:
+#        chmod +x 00_setup.sh && ./00_setup.sh
+#
+# WHERE TO FIND YOUR PROJECT ID:
+#   1. Go to https://console.cloud.google.com
+#   2. Look at the top of the page — click the project dropdown
+#   3. Your Project ID is the grey text under the project name
+#      (often looks like: my-project-name-438291)
+#   4. Copy THAT value, not the project name
 #
 # ==============================================================================
 
@@ -20,8 +44,12 @@ set -euo pipefail
 # ║  EDIT THESE VALUES                                                        ║
 # ╚════════════════════════════════════════════════════════════════════════════╝
 PROJECT_ID="your-project-id"       # <-- Replace with your GCP project ID
-BUCKET_NAME="your-bucket-name"     # <-- Replace with a unique bucket name
-LOCATION="us-central1"             # <-- Change if you want a different region
+                                   #     Example: "ccai-demo-438291"
+                                   #     Find it: project dropdown at top of console
+BUCKET_NAME="your-bucket-name"     # <-- Replace with a globally unique bucket name
+                                   #     Example: "my-ccai-bucket-73921"
+                                   #     TIP: add random numbers to make it unique
+LOCATION="us-central1"             # <-- Leave this as-is (most common region)
 
 # ╔════════════════════════════════════════════════════════════════════════════╗
 # ║  DO NOT EDIT BELOW THIS LINE (unless you know what you're doing)          ║

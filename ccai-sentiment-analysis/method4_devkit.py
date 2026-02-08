@@ -29,7 +29,7 @@ HOW TO RUN:
   1. Complete 00_setup.sh first
 
   2. Get the DevKit. Check the official documentation for the latest location:
-     https://docs.google.com/contact-center/insights/docs/python-library-for-developers
+     https://docs.cloud.google.com/contact-center/insights/docs/python-library-for-developers
 
      Typical setup:
        git clone <devkit-repository-url>
@@ -42,6 +42,9 @@ HOW TO RUN:
        gcloud config set project YOUR_PROJECT_ID
 
   4. Edit the CONFIGURATION section below.
+     EASIEST way — run these two commands (replace the values):
+       sed -i 's/your-project-id/MY-ACTUAL-PROJECT-ID/g' method4_devkit.py
+       sed -i 's/your-bucket-name/my-unique-bucket-12345/g' method4_devkit.py
 
   5. Run:
        python method4_devkit.py --workflow chat    # For chat transcripts
@@ -526,7 +529,7 @@ Examples:
         print("  the standard client library where possible.")
         print()
         print("  To install the DevKit, see:")
-        print("  https://docs.google.com/contact-center/insights/docs/python-library-for-developers")
+        print("  https://docs.cloud.google.com/contact-center/insights/docs/python-library-for-developers")
         print()
 
     # ── Run the selected workflow ────────────────────────────────────────────

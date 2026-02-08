@@ -11,12 +11,23 @@
 # HOW TO RUN:
 #   1. Complete 00_setup.sh and import + analyze at least one conversation
 #      (using Method 1, 2, 3, or 4)
-#   2. Edit the 3 variables below
+#
+#   2. Edit the variable below — EASIEST way:
+#        sed -i 's/your-project-id/MY-ACTUAL-PROJECT-ID/g' method5_bigquery_export.sh
+#
+#      Or open in an editor:
+#        cloudshell edit method5_bigquery_export.sh   (Cloud Shell)
+#        nano method5_bigquery_export.sh              (terminal)
+#
 #   3. Run:
 #        chmod +x method5_bigquery_export.sh
 #        ./method5_bigquery_export.sh
-#   4. Open method5_bigquery_queries.sql and run the queries in the
-#      BigQuery console
+#
+#   4. Open the BigQuery console:
+#        https://console.cloud.google.com/bigquery
+#
+#   5. Open method5_bigquery_queries.sql, copy a query, replace
+#      YOUR_PROJECT_ID and YOUR_DATASET, and run it.
 #
 # ==============================================================================
 

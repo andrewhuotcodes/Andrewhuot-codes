@@ -11,17 +11,29 @@
 # HOW TO RUN:
 #   1. Make sure you ran 00_setup.sh first (APIs enabled, bucket created,
 #      sample_conversation.json uploaded to GCS)
-#   2. Edit the 3 variables below (PROJECT_ID, LOCATION, BUCKET_NAME)
+#
+#   2. Edit the 2 variables below — EASIEST way:
+#        sed -i 's/your-project-id/MY-ACTUAL-PROJECT-ID/g' method2_curl_pipeline.sh
+#        sed -i 's/your-bucket-name/my-unique-bucket-12345/g' method2_curl_pipeline.sh
+#
+#      Or open in an editor:
+#        cloudshell edit method2_curl_pipeline.sh   (Cloud Shell)
+#        nano method2_curl_pipeline.sh              (terminal)
+#
 #   3. Run:
 #        chmod +x method2_curl_pipeline.sh
 #        ./method2_curl_pipeline.sh
 #
+#   4. Watch it go! The script handles everything automatically.
+#      Results are saved to results_method2.json when done.
+#
 # PREREQUISITES:
 #   - gcloud CLI installed and authenticated (gcloud auth login)
-#   - jq installed (for JSON parsing). Install with:
+#     (Cloud Shell has this already)
+#   - jq installed (for JSON parsing):
+#       Cloud Shell:   already installed
 #       Ubuntu/Debian: sudo apt-get install jq
 #       macOS:         brew install jq
-#       Cloud Shell:   already installed
 #
 # ==============================================================================
 

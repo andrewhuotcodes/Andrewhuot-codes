@@ -2,6 +2,8 @@
 
 ## A Complete, Copy-Paste Beginner's Guide
 
+> **Brand new to Google Cloud?** Start with [GETTING_STARTED.md](./GETTING_STARTED.md) instead. It walks you through creating an account, setting up a project, and running your first analysis — assuming zero prior experience.
+
 This project gives you **5 different ways** to perform turn-by-turn sentiment analysis on contact center conversations using [Google Cloud Customer Experience Insights](https://cloud.google.com/solutions/ccai-insights) (formerly CCAI Insights / Conversational Insights).
 
 Every method is self-contained with runnable code. Pick the one that fits your needs.
@@ -24,7 +26,8 @@ Every method is self-contained with runnable code. Pick the one that fits your n
 
 ```
 ccai-sentiment-analysis/
-├── README.md                          # This file (master guide)
+├── GETTING_STARTED.md                 # START HERE if new to Google Cloud
+├── README.md                          # This file (full reference guide)
 ├── requirements.txt                   # Python dependencies
 ├── sample_conversation.json           # Sample data (a 10-turn support chat)
 ├── 00_setup.sh                        # One-time prerequisites setup
@@ -44,14 +47,23 @@ Before using ANY method, you need a Google Cloud project with the right APIs ena
 
 ### Option A: Run the Setup Script (Recommended)
 
+> **Tip: Use Google Cloud Shell** — it's a free terminal in your browser with all tools pre-installed. Click the `>_` icon at the top-right of the [Cloud Console](https://console.cloud.google.com). See [GETTING_STARTED.md](./GETTING_STARTED.md) for a full walkthrough.
+
 ```bash
-# 1. Open 00_setup.sh and edit the 3 variables at the top:
-#    PROJECT_ID, BUCKET_NAME, LOCATION
+# 1. Edit the 2 variables at the top of 00_setup.sh.
+#    The quickest way (replace the placeholder values with your own):
+sed -i 's/your-project-id/MY-ACTUAL-PROJECT-ID/g' 00_setup.sh
+sed -i 's/your-bucket-name/my-unique-bucket-12345/g' 00_setup.sh
+
+#    Or open in an editor:  cloudshell edit 00_setup.sh
+#    Or in terminal:        nano 00_setup.sh
 
 # 2. Make it executable and run it:
 chmod +x 00_setup.sh
 ./00_setup.sh
 ```
+
+> **Where to find your Project ID:** Click the project dropdown at the top of the Cloud Console. The Project ID is the grey text under the project name (e.g., `my-project-438291`).
 
 The script will:
 1. Authenticate you with Google Cloud
@@ -381,7 +393,7 @@ for sentiment in metadata.sentiments:
 
 ```bash
 # 1. Get the DevKit (check the official docs for the latest location):
-#    https://docs.google.com/contact-center/insights/docs/python-library-for-developers
+#    https://docs.cloud.google.com/contact-center/insights/docs/python-library-for-developers
 
 # 2. Install its dependencies:
 pip install -r requirements.txt

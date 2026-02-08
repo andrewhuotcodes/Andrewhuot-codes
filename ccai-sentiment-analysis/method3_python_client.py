@@ -13,15 +13,21 @@ HOW TO RUN:
   1. Make sure you ran 00_setup.sh first (APIs enabled, bucket created,
      sample_conversation.json uploaded to GCS)
 
-  2. Install dependencies:
+  2. Install dependencies (if you said "y" during setup, this is already done):
+       source venv/bin/activate
        pip install -r requirements.txt
-     Or:
-       pip install google-cloud-contact-center-insights google-cloud-storage tabulate
 
-  3. Authenticate:
+  3. Authenticate (Cloud Shell does this automatically):
        gcloud auth application-default login
 
-  4. Edit the 3 variables in the CONFIGURATION section below.
+  4. Edit the 2 variables in the CONFIGURATION section below.
+     EASIEST way — run these two commands (replace the values):
+       sed -i 's/your-project-id/MY-ACTUAL-PROJECT-ID/g' method3_python_client.py
+       sed -i 's/your-bucket-name/my-unique-bucket-12345/g' method3_python_client.py
+
+     Or open in an editor:
+       cloudshell edit method3_python_client.py   (Cloud Shell)
+       nano method3_python_client.py              (terminal)
 
   5. Run:
        python method3_python_client.py
