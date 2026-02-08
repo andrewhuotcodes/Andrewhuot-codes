@@ -322,6 +322,109 @@ FULL_CONVERSATION=$(curl -s -X GET \
     -H "Authorization: Bearer $(get_token)" \
     "$BASE_URL/$PARENT/conversations/$CONVERSATION_ID")
 
+# ── Helper: generate sentiment bar ────────────────────────────────────────
+sentiment_bar() {
+    local score="$1"
+    local width=20
+    local center=$((width / 2))
+    local bar=""
+    local i
+
+    # Determine direction and fill count
+    local neg_fill=0
+    local pos_fill=0
+    # Check if score is exactly zero
+    local is_zero
+    is_zero=$(echo "$score == 0" | bc -l 2>/dev/null || echo "0")
+    if [ "$is_zero" = "1" ]; then
+        neg_fill=0
+        pos_fill=0
+    elif echo "$score" | grep -q "^-"; then
+        local abs_score
+        abs_score=$(echo "$score" | tr -d '-')
+        neg_fill=$(printf "%.0f" "$(echo "$abs_score * $center" | bc -l 2>/dev/null || echo 0)")
+        [ "$neg_fill" -gt "$center" ] 2>/dev/null && neg_fill=$center
+        [ "$neg_fill" -lt 1 ] 2>/dev/null && neg_fill=1
+    else
+        pos_fill=$(printf "%.0f" "$(echo "$score * $center" | bc -l 2>/dev/null || echo 0)")
+        [ "$pos_fill" -gt "$center" ] 2>/dev/null && pos_fill=$center
+        [ "$pos_fill" -lt 1 ] 2>/dev/null && pos_fill=1
+    fi
+
+    # Build bar: [empty_left] [neg_fill] [pos_fill] [empty_right]
+    local empty_left=$((center - neg_fill))
+    local empty_right=$((center - pos_fill))
+
+    for ((i=0; i<empty_left; i++)); do bar+="░"; done
+    for ((i=0; i<neg_fill; i++)); do bar+="▓"; done
+    for ((i=0; i<pos_fill; i++)); do bar+="█"; done
+    for ((i=0; i<empty_right; i++)); do bar+="░"; done
+
+    echo "$bar"
+}
+
+# ── Display: Customer Sentiment Journey (HERO VISUAL) ─────────────────────
+echo ""
+echo "╔══════════════════════════════════════════════════════════════════════════════╗"
+echo "║  CUSTOMER SENTIMENT JOURNEY                                                 ║"
+echo "╚══════════════════════════════════════════════════════════════════════════════╝"
+echo ""
+echo "  Scale: ▓▓▓▓▓ Negative         ░░░░░ Neutral         █████ Positive"
+echo ""
+echo "  Turn   Score   Sentiment Bar          Label              Message"
+echo "  ────── ─────── ────────────────────── ────────────────── ───────────────────────────────────────"
+
+echo "$FULL_CONVERSATION" | jq -r '
+    [.transcript.transcriptSegments // []] | .[0] // [] |
+    to_entries[] |
+    select(.value.channelTag == 1) |
+    "\(.key + 1)|\(.value.sentiment.score // "N/A")|\(.value.sentiment.magnitude // "0")|\(.value.text[0:55])"
+' | while IFS='|' read -r turn_num score magnitude text; do
+    if [ "$score" != "N/A" ] && [ -n "$score" ]; then
+        bar=$(sentiment_bar "$score")
+        # Determine label
+        label=""
+        if echo "$score >= 0.75" | bc -l 2>/dev/null | grep -q "^1"; then
+            label="POSITIVE"
+        elif echo "$score >= 0.25" | bc -l 2>/dev/null | grep -q "^1"; then
+            label="SOMEWHAT POSITIVE"
+        elif echo "$score > -0.25" | bc -l 2>/dev/null | grep -q "^1"; then
+            label="NEUTRAL"
+        elif echo "$score > -0.75" | bc -l 2>/dev/null | grep -q "^1"; then
+            label="SOMEWHAT NEGATIVE"
+        else
+            label="NEGATIVE"
+        fi
+        printf "  %-6s %+7.2f  %-22s %-18s \"%s\"\n" "Turn $turn_num" "$score" "$bar" "$label" "$text"
+    fi
+done
+
+echo ""
+
+# ── Display: Full Turn-by-Turn (All Speakers) ─────────────────────────────
+echo ""
+echo "╔══════════════════════════════════════════════════════════════════════════════╗"
+echo "║  FULL TURN-BY-TURN DETAIL (All Speakers)                                    ║"
+echo "╚══════════════════════════════════════════════════════════════════════════════╝"
+echo ""
+echo "  Turn  Speaker   Score   Sentiment Bar          Message"
+echo "  ───── ──────── ─────── ────────────────────── ─────────────────────────────────────────────"
+
+echo "$FULL_CONVERSATION" | jq -r '
+    [.transcript.transcriptSegments // []] | .[0] // [] |
+    to_entries[] |
+    "\(.key + 1)|\(if .value.channelTag == 1 then "CUSTOMER" else "AGENT" end)|\(.value.sentiment.score // "N/A")|\(.value.text[0:50])"
+' | while IFS='|' read -r turn_num role score text; do
+    if [ "$score" != "N/A" ] && [ -n "$score" ]; then
+        bar=$(sentiment_bar "$score")
+        printf "  %-5s %-8s %+7.2f  %-22s \"%s\"\n" "$turn_num" "$role" "$score" "$bar" "$text"
+    else
+        printf "  %-5s %-8s %7s  %-22s \"%s\"\n" "$turn_num" "$role" "  N/A" "░░░░░░░░░░░░░░░░░░░░" "$text"
+    fi
+done
+
+echo ""
+
 # ── Display: Conversation-Level Sentiment ──────────────────────────────────
 echo ""
 echo "╔══════════════════════════════════════════════════════════════════╗"
@@ -331,20 +434,7 @@ echo ""
 
 echo "$FULL_CONVERSATION" | jq -r '
     .latestAnalysis.analysisResult.callAnalysisMetadata.sentiments[]? |
-    "  Channel \(.channelTag): score=\(.sentimentData.score), magnitude=\(.sentimentData.magnitude)"
-'
-
-# ── Display: Turn-by-Turn Sentiment (from annotations) ────────────────────
-echo ""
-echo "╔══════════════════════════════════════════════════════════════════╗"
-echo "║  TURN-BY-TURN SENTIMENT ANNOTATIONS                            ║"
-echo "╚══════════════════════════════════════════════════════════════════╝"
-echo ""
-
-echo "$FULL_CONVERSATION" | jq -r '
-    .latestAnalysis.analysisResult.callAnalysisMetadata.annotations[]?
-    | select(.sentimentData != null)
-    | "  Turn (Channel \(.channelTag)): score=\(.sentimentData.score), magnitude=\(.sentimentData.magnitude)"
+    "  \(if .channelTag == 1 then "Customer" else "Agent   " end): score=\(.sentimentData.score), magnitude=\(.sentimentData.magnitude)"
 '
 
 # ── Display: Entity Annotations ──────────────────────────────────────────
@@ -383,6 +473,34 @@ echo "$FULL_CONVERSATION" | jq -r '
     "  Issue: \(.issue) (score=\(.score))"
 '
 
+# ── Display: Customer Sentiment Summary Box ───────────────────────────────
+echo ""
+echo "╔══════════════════════════════════════════════════════════════════╗"
+echo "║  CUSTOMER SENTIMENT SUMMARY                                     ║"
+echo "╚══════════════════════════════════════════════════════════════════╝"
+echo ""
+
+echo "$FULL_CONVERSATION" | jq -r '
+    [.transcript.transcriptSegments // [] | .[]] |
+    [.[] | select(.channelTag == 1) | .sentiment.score // empty] |
+    if length > 0 then
+        "  Opening sentiment:  \(.[0])"
+      + "\n  Lowest point:       \(min)"
+      + "\n  Highest point:      \(max)"
+      + "\n  Closing sentiment:  \(.[-1])"
+      + "\n  Overall shift:      \(.[-1] - .[0])"
+      + (if (.[-1] - .[0]) > 0.5 then
+            "\n\n  *** SUCCESSFUL RESOLUTION ***"
+          elif (.[-1] - .[0]) > 0 then
+            "\n\n  Slight improvement in customer sentiment."
+          else
+            "\n\n  Customer sentiment did not improve."
+          end)
+    else
+      "  No customer sentiment data found."
+    end
+'
+
 # ── Save raw results to file ─────────────────────────────────────────────
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 OUTPUT_FILE="$SCRIPT_DIR/results_method2.json"
@@ -401,8 +519,8 @@ echo ""
 echo "  To see only sentiment annotations:"
 echo "    cat $OUTPUT_FILE | jq '.latestAnalysis.analysisResult.callAnalysisMetadata.annotations[] | select(.sentimentData != null)'"
 echo ""
-echo "  To see the transcript:"
-echo "    cat $OUTPUT_FILE | jq '.transcript.transcriptSegments[]'"
+echo "  To see the transcript with sentiment:"
+echo "    cat $OUTPUT_FILE | jq '.transcript.transcriptSegments[] | {text, channelTag, sentiment}'"
 echo ""
 
 # ── Bonus: Show how to manually do each step separately ──────────────────

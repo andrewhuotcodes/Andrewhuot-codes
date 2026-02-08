@@ -354,9 +354,6 @@ The script will automatically:
   Transcript: gs://my-ccai-bucket-73921/transcripts/sample_conversation.json
 
   STEP 2/5: Waiting for upload to complete
-  Polling operation: Conversation upload
-  Waiting... attempt 1/60
-  Waiting... attempt 2/60
   Done! (after 3 polls)
 
   STEP 3/5: Analyzing conversation (all annotators)
@@ -365,22 +362,48 @@ The script will automatically:
 
   STEP 5/5: Retrieving full results
 
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  CUSTOMER SENTIMENT JOURNEY                                                 ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+  Scale: ▓▓▓▓▓ Negative         Neutral         █████ Positive
+
+  Turn   Score   Sentiment Bar          Label              Message
+  ────── ─────── ────────────────────── ────────────────── ────────────────────────────
+  Turn 1  -0.50  ▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░  SOMEWHAT NEGATIVE  "problems with my internet..."
+  Turn 3  -1.00  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  NEGATIVE           "terrible...switching providers"
+  Turn 5  -0.50  ▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░  SOMEWHAT NEGATIVE  "affecting my job"
+  Turn 7  -0.25  ▓▓▓▓▓░░░░░░░░░░░░░░░  MIXED              "should get a credit"
+  Turn 9  +1.00  ░░░░░░░░░░██████████  POSITIVE           "appreciate you...thank you"
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  FULL TURN-BY-TURN DETAIL (All Speakers)                                    ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+  Turn  Speaker   Score   Sentiment Bar          Message
+  ───── ──────── ─────── ────────────────────── ───────────────────────────────────
+  1     CUSTOMER  -0.50  ▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░  "problems with my internet..."
+  2     AGENT     +0.30  ░░░░░░░░░░███░░░░░░░░  "sorry to hear...happy to help"
+  3     CUSTOMER  -1.00  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  "terrible...switching providers"
+  4     AGENT     +0.20  ░░░░░░░░░░██░░░░░░░░░  "understand your frustration..."
+  5     CUSTOMER  -0.50  ▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░  "affecting my job"
+  6     AGENT     +0.30  ░░░░░░░░░░███░░░░░░░░  "schedule a technician..."
+  7     CUSTOMER  -0.25  ▓▓▓▓▓░░░░░░░░░░░░░░░  "should get a credit"
+  8     AGENT     +0.40  ░░░░░░░░░░████░░░░░░░  "applied a 5-day credit..."
+  9     CUSTOMER  +1.00  ░░░░░░░░░░██████████  "appreciate you...thank you"
+  10    AGENT     +0.60  ░░░░░░░░░░██████░░░░░  "You're welcome!"
+
 ╔══════════════════════════════════════════════════════════════════╗
-║  CONVERSATION-LEVEL SENTIMENT                                   ║
+║  CUSTOMER SENTIMENT SUMMARY                                     ║
 ╚══════════════════════════════════════════════════════════════════╝
 
-  Channel 1: score=-0.3, magnitude=0.7
-  Channel 2: score=0.5, magnitude=0.6
+  Opening sentiment:  -0.5
+  Lowest point:       -1
+  Highest point:      1
+  Closing sentiment:  1
+  Overall shift:      1.5
 
-╔══════════════════════════════════════════════════════════════════╗
-║  TURN-BY-TURN SENTIMENT ANNOTATIONS                            ║
-╚══════════════════════════════════════════════════════════════════╝
-
-  Turn (Channel 1): score=-0.5, magnitude=0.5
-  Turn (Channel 1): score=-1.0, magnitude=0.9
-  Turn (Channel 1): score=-0.5, magnitude=0.5
-  Turn (Channel 1): score=-0.25, magnitude=0.5
-  Turn (Channel 1): score=1.0, magnitude=0.9
+  *** SUCCESSFUL RESOLUTION ***
 
 ╔══════════════════════════════════════════════════════════════════╗
 ║  ENTITY EXTRACTION                                              ║
@@ -404,11 +427,11 @@ The script will automatically:
 The script saves the full JSON response to `results_method2.json`. Explore it:
 
 ```bash
+# See the transcript with sentiment per turn:
+cat results_method2.json | jq '.transcript.transcriptSegments[] | {text, channelTag, sentiment}'
+
 # See all sentiment annotations:
 cat results_method2.json | jq '.latestAnalysis.analysisResult.callAnalysisMetadata.annotations[] | select(.sentimentData != null)'
-
-# See the transcript:
-cat results_method2.json | jq '.transcript.transcriptSegments[]'
 
 # See all metadata:
 cat results_method2.json | jq '.latestAnalysis.analysisResult.callAnalysisMetadata'
@@ -481,28 +504,40 @@ The script will:
 
 ### M3 — Step 5: View the Output
 
-You will see formatted tables showing:
-
-**Turn-by-Turn Sentiment:**
+The script now produces a rich visual display. The **hero section** is the Customer Sentiment Journey:
 
 ```
-+------+----------+-------------------------------------------+--------+-----------+------------------+
-| Turn | Speaker  | Text (truncated)                          | Score  | Magnitude | Label            |
-+------+----------+-------------------------------------------+--------+-----------+------------------+
-|  1   | CUSTOMER | problems with my internet...frustrating   | -0.50  |   0.50    | Somewhat Negative|
-|  2   | AGENT    | sorry to hear...happy to help              |  0.30  |   0.30    | Somewhat Positive|
-|  3   | CUSTOMER | terrible...considering switching           | -1.00  |   0.90    | Negative         |
-|  4   | AGENT    | understand your frustration                |  0.20  |   0.40    | Neutral          |
-|  5   | CUSTOMER | affecting my job                           | -0.50  |   0.50    | Somewhat Negative|
-|  6   | AGENT    | schedule a technician                      |  0.30  |   0.40    | Somewhat Positive|
-|  7   | CUSTOMER | should get a credit                        | -0.25  |   0.50    | Mixed            |
-|  8   | AGENT    | applied a 5-day credit                     |  0.40  |   0.40    | Somewhat Positive|
-|  9   | CUSTOMER | appreciate you...thank you                 |  1.00  |   0.90    | Positive         |
-| 10   | AGENT    | You're welcome!                            |  0.60  |   0.60    | Positive         |
-+------+----------+-------------------------------------------+--------+-----------+------------------+
+╔════════════════════════════════════════════════════════════════════════╗
+║  CUSTOMER SENTIMENT JOURNEY                                          ║
+╚════════════════════════════════════════════════════════════════════════╝
+
+  Scale: ▓▓▓▓▓ Negative    Neutral    █████ Positive
+
+  Turn     Score   ────────────────────  Message
+  ──────── ──────  ────────────────────  ───────────────────────────────────────────────
+  Turn 1   -0.50   ▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░  "problems with my internet...frustrating"
+           ↘ -0.50
+  Turn 3   -1.00   ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  "terrible...considering switching providers"
+           ↗ +0.50
+  Turn 5   -0.50   ▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░  "affecting my job"
+           ↗ +0.25
+  Turn 7   -0.25   ▓▓▓▓▓░░░░░░░░░░░░░░░  "should get a credit"
+           ↗ +1.25
+  Turn 9   +1.00   ░░░░░░░░░░██████████  "appreciate you...thank you"
+
+  ┌──────────────────────────────────────────────────────────────┐
+  │  CUSTOMER SENTIMENT SUMMARY                                  │
+  ├──────────────────────────────────────────────────────────────┤
+  │  Opening sentiment:  -0.50  (SOMEWHAT NEGATIVE)              │
+  │  Lowest point:       -1.00  (NEGATIVE          )             │
+  │  Highest point:      +1.00  (POSITIVE          )             │
+  │  Closing sentiment:  +1.00  (POSITIVE          )             │
+  ├──────────────────────────────────────────────────────────────┤
+  │  Verdict: SUCCESSFUL RESOLUTION (Sentiment improved by +1.50)│
+  └──────────────────────────────────────────────────────────────┘
 ```
 
-Plus: entity extraction, intent detection, and issue/topic results.
+Then a **full detail table** for all speakers, plus entity extraction, intent detection, and issue/topic results.
 
 ---
 

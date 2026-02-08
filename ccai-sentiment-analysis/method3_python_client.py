@@ -220,16 +220,25 @@ def step4_display_results(
     client = contact_center_insights_v1.ContactCenterInsightsClient()
     conversation = client.get_conversation(name=conversation_name)
 
-    # ── 4a: Turn-by-Turn Sentiment ─────────────────────────────────────────
+    # ── 4a: Customer Sentiment Journey (HERO VISUAL) ────────────────────────
+    print()
+    print("\u2554" + "\u2550" * 68 + "\u2557")
+    print("\u2551  CUSTOMER SENTIMENT JOURNEY" + " " * 40 + "\u2551")
+    print("\u255a" + "\u2550" * 68 + "\u255d")
+    print()
+
+    _display_sentiment_journey(conversation)
+
+    # ── 4b: Full Turn-by-Turn Detail ──────────────────────────────────────
     print()
     print("+" + "-" * 68 + "+")
-    print("|  TURN-BY-TURN SENTIMENT ANALYSIS" + " " * 35 + "|")
+    print("|  FULL TURN-BY-TURN DETAIL (All Speakers)" + " " * 26 + "|")
     print("+" + "-" * 68 + "+")
     print()
 
     _display_turn_sentiment(conversation)
 
-    # ── 4b: Conversation-Level Sentiment ───────────────────────────────────
+    # ── 4c: Conversation-Level Sentiment ───────────────────────────────────
     print()
     print("+" + "-" * 68 + "+")
     print("|  CONVERSATION-LEVEL SENTIMENT" + " " * 38 + "|")
@@ -241,7 +250,7 @@ def step4_display_results(
     if not show_all_features:
         return
 
-    # ── 4c: Entity Extraction ──────────────────────────────────────────────
+    # ── 4d: Entity Extraction ──────────────────────────────────────────────
     print()
     print("+" + "-" * 68 + "+")
     print("|  ENTITY EXTRACTION" + " " * 49 + "|")
@@ -250,7 +259,7 @@ def step4_display_results(
 
     _display_entities(conversation)
 
-    # ── 4d: Intent Detection ───────────────────────────────────────────────
+    # ── 4e: Intent Detection ───────────────────────────────────────────────
     print()
     print("+" + "-" * 68 + "+")
     print("|  INTENT DETECTION" + " " * 50 + "|")
@@ -259,7 +268,7 @@ def step4_display_results(
 
     _display_intents(conversation)
 
-    # ── 4e: Issue/Topic Detection ──────────────────────────────────────────
+    # ── 4f: Issue/Topic Detection ──────────────────────────────────────────
     print()
     print("+" + "-" * 68 + "+")
     print("|  ISSUE / TOPIC DETECTION" + " " * 43 + "|")
@@ -268,7 +277,7 @@ def step4_display_results(
 
     _display_issues(conversation)
 
-    # ── 4f: All Annotations Summary ────────────────────────────────────────
+    # ── 4g: All Annotations Summary ────────────────────────────────────────
     print()
     print("+" + "-" * 68 + "+")
     print("|  ALL ANNOTATIONS SUMMARY" + " " * 43 + "|")
@@ -279,54 +288,58 @@ def step4_display_results(
 
 
 def _display_turn_sentiment(conversation):
-    """Display per-turn sentiment from annotations."""
-    if not conversation.latest_analysis:
-        print("  No analysis found. Run an analysis first.")
+    """Display per-turn sentiment with visual bars and message text."""
+    turns = _get_turns_with_sentiment(conversation)
+
+    if not turns:
+        print("  No turn data found. Run an analysis first.")
         return
 
-    result = conversation.latest_analysis.analysis_result
-    if not result or not result.call_analysis_metadata:
-        print("  No call analysis metadata found.")
-        return
-
-    metadata = result.call_analysis_metadata
-    annotations = metadata.annotations or []
-
-    # Collect sentiment annotations
-    sentiment_turns = []
-    turn_num = 0
-    for annotation in annotations:
-        if annotation.sentiment_data:
-            turn_num += 1
-            channel = annotation.channel_tag
-            role = "CUSTOMER" if channel == 1 else "AGENT"
-            score = annotation.sentiment_data.score
-            magnitude = annotation.sentiment_data.magnitude
-            label = _get_sentiment_label(score, magnitude)
-
-            sentiment_turns.append({
-                "Turn": turn_num,
-                "Speaker": role,
-                "Score": f"{score:+.2f}",
-                "Magnitude": f"{magnitude:.2f}",
-                "Label": label,
-            })
-
-    if not sentiment_turns:
+    has_any_score = any(t["score"] is not None for t in turns)
+    if not has_any_score:
         print("  No sentiment annotations found.")
-        print("  (This may happen if only agent turns are present,")
-        print("   since CX Insights primarily scores customer turns.)")
+        print("  (Run analysis first, then retrieve results.)")
         return
 
-    if HAS_TABULATE:
-        print(tabulate(sentiment_turns, headers="keys", tablefmt="rounded_grid"))
+    has_text = any(t["text"] for t in turns)
+
+    # Build display data
+    rows = []
+    for t in turns:
+        score_str = f"{t['score']:+.2f}" if t["score"] is not None else "  N/A"
+        mag_str = f"{t['magnitude']:.2f}" if t["magnitude"] is not None else " N/A"
+        label = _get_sentiment_label(t["score"], t["magnitude"] or 0.0) if t["score"] is not None else ""
+        bar = _sentiment_bar(t["score"]) if t["score"] is not None else "\u2591" * 20
+        text = t["text"]
+        if len(text) > 45:
+            text = text[:42] + "..."
+        rows.append({
+            "Turn": t["turn"],
+            "Speaker": t["role"],
+            "Score": score_str,
+            "Mag.": mag_str,
+            "Bar": bar,
+            "Label": label,
+            "Text": text,
+        })
+
+    if HAS_TABULATE and has_text:
+        print(tabulate(rows, headers="keys", tablefmt="rounded_grid"))
+    elif HAS_TABULATE:
+        simple_rows = [{k: v for k, v in r.items() if k != "Text"} for r in rows]
+        print(tabulate(simple_rows, headers="keys", tablefmt="rounded_grid"))
     else:
-        # Fallback: simple formatted output
-        print(f"  {'Turn':<6} {'Speaker':<10} {'Score':<8} {'Magnitude':<11} {'Label'}")
-        print(f"  {'─' * 6} {'─' * 10} {'─' * 8} {'─' * 11} {'─' * 20}")
-        for t in sentiment_turns:
-            print(f"  {t['Turn']:<6} {t['Speaker']:<10} {t['Score']:<8} "
-                  f"{t['Magnitude']:<11} {t['Label']}")
+        # Fallback: formatted output
+        if has_text:
+            print(f"  {'Turn':<5} {'Speaker':<9} {'Score':>6} {'Mag.':>5}  {'Bar':<20}  {'Label':<18} Message")
+            print(f"  {'─' * 5} {'─' * 9} {'─' * 6} {'─' * 5}  {'─' * 20}  {'─' * 18} {'─' * 40}")
+            for r in rows:
+                print(f"  {r['Turn']:<5} {r['Speaker']:<9} {r['Score']:>6} {r['Mag.']:>5}  {r['Bar']:<20}  {r['Label']:<18} {r['Text']}")
+        else:
+            print(f"  {'Turn':<5} {'Speaker':<9} {'Score':>6} {'Mag.':>5}  {'Bar':<20}  {'Label'}")
+            print(f"  {'─' * 5} {'─' * 9} {'─' * 6} {'─' * 5}  {'─' * 20}  {'─' * 18}")
+            for r in rows:
+                print(f"  {r['Turn']:<5} {r['Speaker']:<9} {r['Score']:>6} {r['Mag.']:>5}  {r['Bar']:<20}  {r['Label']}")
 
 
 def _display_conversation_sentiment(conversation):
@@ -442,6 +455,241 @@ def _get_sentiment_label(score: float, magnitude: float = 0.0) -> str:
         return "SOMEWHAT NEGATIVE"
     else:
         return "NEGATIVE"
+
+
+def _sentiment_bar(score, width=20):
+    """Create a visual sentiment bar. Negative fills left, positive fills right."""
+    if score is None:
+        return "\u2591" * width  # ░ all light shade
+    center = width // 2
+    bar = list("\u2591" * width)  # ░ light shade background
+    if score < 0:
+        fill = min(center, max(1, round(abs(score) * center)))
+        for i in range(center - fill, center):
+            bar[i] = "\u2593"  # ▓ dark shade
+    elif score > 0:
+        fill = min(center, max(1, round(score * center)))
+        for i in range(center, center + fill):
+            bar[i] = "\u2588"  # █ full block
+    return "".join(bar)
+
+
+def _get_turns_with_sentiment(conversation):
+    """
+    Extract turns with text + sentiment from a conversation.
+    Tries transcript segments first, falls back to annotations.
+    Returns list of dicts with: turn, role, text, score, magnitude
+    """
+    segments = []
+    if conversation.transcript and conversation.transcript.transcript_segments:
+        segments = list(conversation.transcript.transcript_segments)
+
+    result = conversation.latest_analysis.analysis_result if conversation.latest_analysis else None
+    metadata = result.call_analysis_metadata if result else None
+    annotations = [a for a in (metadata.annotations or []) if a.sentiment_data] if metadata else []
+
+    turns = []
+    has_segment_sentiment = False
+
+    # Build turns from transcript segments
+    for i, seg in enumerate(segments):
+        channel = seg.channel_tag
+        role = "CUSTOMER" if channel == 1 else "AGENT"
+        text = seg.text or ""
+        score = None
+        magnitude = None
+        if hasattr(seg, "sentiment") and seg.sentiment:
+            score = seg.sentiment.score
+            magnitude = seg.sentiment.magnitude
+            has_segment_sentiment = True
+        turns.append({
+            "turn": i + 1, "role": role, "text": text,
+            "score": score, "magnitude": magnitude,
+        })
+
+    # Fallback: match annotations to segments by transcript_index
+    if not has_segment_sentiment and annotations and turns:
+        ann_by_index = {}
+        for ann in annotations:
+            idx = None
+            if hasattr(ann, "annotation_start_boundary") and ann.annotation_start_boundary:
+                idx = ann.annotation_start_boundary.transcript_index
+            if idx is not None:
+                ann_by_index[idx] = ann
+        if ann_by_index:
+            for t in turns:
+                ann = ann_by_index.get(t["turn"] - 1)
+                if ann:
+                    t["score"] = ann.sentiment_data.score
+                    t["magnitude"] = ann.sentiment_data.magnitude
+        else:
+            # No index — pair by order
+            for i, ann in enumerate(annotations):
+                if i < len(turns):
+                    turns[i]["score"] = ann.sentiment_data.score
+                    turns[i]["magnitude"] = ann.sentiment_data.magnitude
+
+    # Last resort: if no segments at all, build from annotations alone
+    if not turns and annotations:
+        for i, ann in enumerate(annotations):
+            channel = ann.channel_tag
+            turns.append({
+                "turn": i + 1,
+                "role": "CUSTOMER" if channel == 1 else "AGENT",
+                "text": "",
+                "score": ann.sentiment_data.score,
+                "magnitude": ann.sentiment_data.magnitude,
+            })
+
+    return turns
+
+
+def _display_sentiment_journey(conversation):
+    """
+    Hero visual: Customer sentiment journey with bars, arrows, and summary box.
+    This is the main demo-friendly visualization.
+    """
+    turns = _get_turns_with_sentiment(conversation)
+    customer_turns = [t for t in turns if t["role"] == "CUSTOMER" and t["score"] is not None]
+
+    if not customer_turns:
+        print("  No customer sentiment data available.")
+        return
+
+    # Header
+    bar_legend = "\u2593" * 5 + " Negative    \u2591" * 0 + "Neutral    " + "\u2588" * 5 + " Positive"
+    print(f"  Scale: {bar_legend}")
+    print()
+    print(f"  {'Turn':<8} {'Score':>6}  {'':─<20}  Message")
+    print(f"  {'─' * 8} {'─' * 6}  {'─' * 20}  {'─' * 55}")
+
+    for i, ct in enumerate(customer_turns):
+        bar = _sentiment_bar(ct["score"])
+        label = _get_sentiment_label(ct["score"], ct["magnitude"] or 0.0)
+        # Truncate text for display
+        text = ct["text"]
+        if len(text) > 55:
+            text = text[:52] + "..."
+        print(f'  Turn {ct["turn"]:<3} {ct["score"]:>+6.2f}  {bar}  "{text}"')
+
+        # Show arrow between customer turns
+        if i < len(customer_turns) - 1:
+            next_score = customer_turns[i + 1]["score"]
+            diff = next_score - ct["score"]
+            if diff > 0.3:
+                arrow = "          \u2197 +"  # ↗
+            elif diff < -0.3:
+                arrow = "          \u2198 "   # ↘
+            elif diff > 0:
+                arrow = "          \u2192 +"  # →
+            elif diff < 0:
+                arrow = "          \u2192 "   # →
+            else:
+                arrow = "          \u2192  "  # →
+            print(f"{arrow}{diff:.2f}")
+
+    # Summary box
+    first = customer_turns[0]["score"]
+    last = customer_turns[-1]["score"]
+    low = min(ct["score"] for ct in customer_turns)
+    high = max(ct["score"] for ct in customer_turns)
+    shift = last - first
+
+    print()
+    print(f"  \u250c{'─' * 62}\u2510")
+    print(f"  \u2502  CUSTOMER SENTIMENT SUMMARY{' ' * 35}\u2502")
+    print(f"  \u251c{'─' * 62}\u2524")
+    print(f"  \u2502  Opening sentiment:  {first:>+6.2f}  ({_get_sentiment_label(first):<18}){' ' * 12}\u2502")
+    print(f"  \u2502  Lowest point:       {low:>+6.2f}  ({_get_sentiment_label(low):<18}){' ' * 12}\u2502")
+    print(f"  \u2502  Highest point:      {high:>+6.2f}  ({_get_sentiment_label(high):<18}){' ' * 12}\u2502")
+    print(f"  \u2502  Closing sentiment:  {last:>+6.2f}  ({_get_sentiment_label(last):<18}){' ' * 12}\u2502")
+    print(f"  \u251c{'─' * 62}\u2524")
+
+    if shift > 0.5:
+        verdict = "SUCCESSFUL RESOLUTION"
+        detail = f"Sentiment improved by {shift:+.2f}"
+    elif shift > 0:
+        verdict = "SLIGHT IMPROVEMENT"
+        detail = f"Sentiment improved by {shift:+.2f}"
+    elif shift == 0:
+        verdict = "NO CHANGE"
+        detail = f"Sentiment stayed at {first:+.2f}"
+    elif shift > -0.5:
+        verdict = "SLIGHT DECLINE"
+        detail = f"Sentiment dropped by {shift:+.2f}"
+    else:
+        verdict = "ESCALATION"
+        detail = f"Sentiment dropped by {shift:+.2f}"
+
+    print(f"  \u2502  Verdict: {verdict:<20} ({detail}){' ' * max(0, 19 - len(detail))}\u2502")
+    print(f"  \u2514{'─' * 62}\u2518")
+
+    # ASCII mini-chart
+    print()
+    _display_mini_chart(customer_turns)
+
+
+def _display_mini_chart(customer_turns):
+    """Display a compact ASCII chart of customer sentiment over time."""
+    if len(customer_turns) < 2:
+        return
+
+    chart_rows = 11  # -1.0 to +1.0 in 0.2 increments
+    y_labels = ["+1.0", "+0.8", "+0.6", "+0.4", "+0.2", " 0.0",
+                "-0.2", "-0.4", "-0.6", "-0.8", "-1.0"]
+
+    # Each customer turn gets a column
+    col_spacing = max(6, min(12, 60 // len(customer_turns)))
+    chart_width = col_spacing * len(customer_turns)
+
+    for row in range(chart_rows):
+        row_score = 1.0 - row * 0.2
+        label = y_labels[row]
+        line = f"  {label} \u2502"
+
+        for ci, ct in enumerate(customer_turns):
+            score = ct["score"]
+            score_row = round((1.0 - score) / 0.2)
+            score_row = max(0, min(10, score_row))
+
+            col_start = ci * col_spacing
+            cell = ""
+
+            if score_row == row:
+                marker = f" \u25cf"  # ● filled circle
+                cell = marker + " " * (col_spacing - len(marker))
+            elif row == 5:  # neutral line
+                cell = "\u2500" * col_spacing  # ─
+            else:
+                cell = " " * col_spacing
+
+            line += cell
+
+        # Add right border for neutral line
+        if row == 5:
+            line += "\u2500"
+
+        print(line)
+
+    # X-axis
+    x_axis = "       \u2514"
+    for ci, ct in enumerate(customer_turns):
+        x_axis += "\u2500" * col_spacing
+    print(x_axis)
+
+    # X-axis labels
+    x_labels = "        "
+    for ci, ct in enumerate(customer_turns):
+        label = f"T{ct['turn']}"
+        x_labels += label + " " * (col_spacing - len(label))
+    print(x_labels)
+
+    # Score labels below
+    x_scores = "       "
+    for ci, ct in enumerate(customer_turns):
+        label = f"({ct['score']:+.1f})"
+        x_scores += label + " " * (col_spacing - len(label))
+    print(x_scores)
 
 
 # ==============================================================================
