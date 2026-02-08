@@ -1,0 +1,74 @@
+{
+  "conversation_info": {
+    "categories": [
+      {
+        "display_name": "Internet Service Issue"
+      },
+      {
+        "display_name": "Billing Credit Request"
+      }
+    ]
+  },
+  "entries": [
+    {
+      "text": "Hi, I've been having problems with my internet connection for the past three days. It keeps dropping every few hours and it's really frustrating.",
+      "role": "CUSTOMER",
+      "user_id": 1,
+      "start_timestamp_usec": 1000000
+    },
+    {
+      "text": "I'm sorry to hear that you're experiencing connectivity issues. I'd be happy to help you troubleshoot this. Can you tell me what type of internet plan you're on?",
+      "role": "AGENT",
+      "user_id": 2,
+      "start_timestamp_usec": 5000000
+    },
+    {
+      "text": "I'm on the Premium 500 Mbps plan. I'm paying $89 a month for this and the service has been terrible lately. I'm seriously considering switching providers.",
+      "role": "CUSTOMER",
+      "user_id": 1,
+      "start_timestamp_usec": 12000000
+    },
+    {
+      "text": "I completely understand your frustration, and I want to make sure we resolve this for you today. Let me check the network status in your area. Can I have your account number or the phone number associated with your account?",
+      "role": "AGENT",
+      "user_id": 2,
+      "start_timestamp_usec": 20000000
+    },
+    {
+      "text": "Sure, my account number is 7829456. I just want this fixed. I work from home and the constant disconnections are affecting my job.",
+      "role": "CUSTOMER",
+      "user_id": 1,
+      "start_timestamp_usec": 28000000
+    },
+    {
+      "text": "Thank you. I can see there was a network maintenance event in your area that ended yesterday, but I'm also noticing some signal issues on your line. I'd like to schedule a technician visit to check your connection. Would tomorrow between 9 AM and 12 PM work for you?",
+      "role": "AGENT",
+      "user_id": 2,
+      "start_timestamp_usec": 35000000
+    },
+    {
+      "text": "Tomorrow morning works. But what about the three days I've already lost? I think I should get a credit for the downtime.",
+      "role": "CUSTOMER",
+      "user_id": 1,
+      "start_timestamp_usec": 45000000
+    },
+    {
+      "text": "Absolutely, that's a fair request. I've gone ahead and applied a 5-day service credit to your account, which comes to $14.83. You'll see that reflected on your next bill. Is there anything else I can help you with today?",
+      "role": "AGENT",
+      "user_id": 2,
+      "start_timestamp_usec": 52000000
+    },
+    {
+      "text": "No, that covers it. I appreciate you taking care of the credit without me having to argue about it. Thank you for your help.",
+      "role": "CUSTOMER",
+      "user_id": 1,
+      "start_timestamp_usec": 60000000
+    },
+    {
+      "text": "You're welcome! I've booked the technician for tomorrow between 9 and 12. You'll receive a confirmation text shortly. If you experience any issues before then, don't hesitate to call back. Have a great day!",
+      "role": "AGENT",
+      "user_id": 2,
+      "start_timestamp_usec": 65000000
+    }
+  ]
+}
