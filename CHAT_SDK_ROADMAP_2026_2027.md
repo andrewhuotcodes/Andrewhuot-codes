@@ -42,9 +42,19 @@ The GECX Chat SDK — externally marketed as the "chat widget" and internally as
 
 | Phase | Timeline | Theme | Headline Capability |
 |-------|----------|-------|-------------------|
-| **Phase 1: Foundation** | Q2-Q3 2026 | "Unlock the Platform" | Extensible widget system, full SDK API, UCP-native checkout |
-| **Phase 2: Differentiation** | Q3-Q4 2026 | "Commerce in Every Thread" | Generative UI, multi-agent orchestration, cross-merchant carts |
-| **Phase 3: Dominance** | Q1-Q2 2027 | "The Agentic Surface" | Spatial computing, autonomous delegation, protocol-agnostic commerce |
+| **Phase 1: Make It Real** | Q2-Q3 2026 | "Ship the Commerce Surface" | SDK v2 API, UCP checkout, accessibility, streaming renderer, audit trail |
+| **Phase 2: Make It Intelligent** | Q4 2026 | "Agent-Composed UI" | Generative UI, multi-agent threads, ACP compatibility, proactive engagement |
+| **Phase 3: Make It Scale** | Q1-Q2 2027 | "Enterprise Grade" | Native mobile SDKs, BigQuery export, real-time monitoring |
+
+> **REVISION NOTE (v2, Feb 2026):** This roadmap has been revised following critical self-review.
+> See [CHAT_SDK_VISION_2026.md](./CHAT_SDK_VISION_2026.md) for the position paper explaining all changes.
+> See [CHAT_SDK_TECHNICAL_SPEC.md](./CHAT_SDK_TECHNICAL_SPEC.md) for code-ready interface definitions.
+>
+> **Key changes from v1:** Added accessibility (WCAG 2.2 AA) as P0 Phase 1. Added streaming
+> renderer. Moved Transaction Audit Trail from Phase 3 to Phase 1 (EU AI Act compliance).
+> Moved mobile-first design to Phase 1. Cut 16 features (spatial computing, kiosk/in-car SDK,
+> widget marketplace, B2B procurement, collaborative shopping, countdown timer widget).
+> Reduced total from 44 features to 28 focused features. Added open-source strategy recommendation.
 
 ---
 
@@ -414,114 +424,111 @@ chatSDK.trackEvent(name: string, properties: object)
 
 ## 7. Phased Roadmap
 
-### Phase 1: Foundation — "Unlock the Platform"
+### REVISED Phase 1: "Make It Real"
 **Q2-Q3 2026 (April - September)**
 
-The goal of Phase 1 is to close the critical gaps that make the SDK a bottleneck and lay the technical foundation for everything that follows.
+Phase 1 answers one question: **can a user discover, compare, and purchase a product entirely within the chat thread, accessibly and securely?** Three goals: make the SDK programmable, make it a commerce surface, make it trustworthy.
 
-#### Q2 2026 (April - June): Core Platform
+#### Q2 2026 (April - June): Core Platform + Trust
 
 | # | Feature | Pillar | Priority | Rationale |
 |---|---------|--------|----------|-----------|
-| 1 | **Chat SDK v2 JavaScript API** — full lifecycle, messaging, context, and session methods | Developer Platform | P0 | Unblocks all host-page integrations; required for everything else |
-| 2 | **Widget Registry + 10 new built-in widgets** | Extensible Widgets | P0 | Unblocks vertical expansion beyond e-commerce |
-| 3 | **Multilingual rich content** (top 10 languages) | Extensible Widgets | P0 | Hard blocker for global customers (Woolworths AU, Zalando EU) |
-| 4 | **30+ events** (message lifecycle, conversation lifecycle, commerce, typing) | Developer Platform | P0 | Enables analytics, integrations, and custom workflows |
-| 5 | **Conversation History API** with Firestore persistence | Developer Platform | P0 | Cross-session continuity; required for Commerce Threads |
-| 6 | **Iframe Sandbox Mode** | Trust | P0 | Enterprise security requirement; addresses documented XSS warnings |
-| 7 | **TypeScript SDK + React SDK** | Developer Platform | P1 | Developer experience; captures React-dominant frontend ecosystem |
-| 8 | **Developer Console** (debug panel) | Developer Platform | P1 | Reduces integration friction; accelerates developer adoption |
+| 1 | **SDK v2 Core API** — lifecycle, messaging, context, session management | Developer Platform | P0 | Everything else requires this; see [TECHNICAL_SPEC.md §7](./CHAT_SDK_TECHNICAL_SPEC.md#7-public-sdk-api) |
+| 2 | **Event Bus** with 30+ typed events, audit logging, analytics hooks | Developer Platform | P0 | Foundation for observability and compliance; see [TECHNICAL_SPEC.md §3](./CHAT_SDK_TECHNICAL_SPEC.md#3-event-bus-specification) |
+| 3 | **Widget Registry** + 12 built-in widgets + custom registration API | Extensible Widgets | P0 | Unlocks all future UI; see [TECHNICAL_SPEC.md §4](./CHAT_SDK_TECHNICAL_SPEC.md#4-widget-registry-specification) |
+| 4 | **Streaming Message Renderer** with text/widget block interleaving | Developer Platform | P0 | Modern AI UX expectation; see [TECHNICAL_SPEC.md §6](./CHAT_SDK_TECHNICAL_SPEC.md#6-streaming-renderer-specification) |
+| 5 | **Accessibility Layer** — WCAG 2.2 AA, keyboard nav, screen reader, VPAT | Trust | P0 | **Legal requirement** (EAA, ADA, Section 508); see [VISION.md §Accessibility](./CHAT_SDK_VISION_2026.md#the-accessibility-architecture) |
+| 6 | **Transaction Audit Trail** — immutable event log with payload hashing | Trust | P0 | **EU AI Act enforceable Aug 2026**; see [TECHNICAL_SPEC.md §12](./CHAT_SDK_TECHNICAL_SPEC.md#12-audit-trail-schema) |
+| 7 | **Iframe Sandbox Mode** — strict isolation for enterprise deployments | Trust | P0 | Enterprise security; addresses documented XSS warnings |
+| 8 | **Mobile-First Responsive Design** — all components designed mobile-first | Platform | P0 | 60%+ of e-commerce traffic is mobile; constraint, not feature |
 
 #### Q3 2026 (July - September): Commerce Foundation
 
 | # | Feature | Pillar | Priority | Rationale |
 |---|---------|--------|----------|-----------|
-| 9 | **UCP-Native Inline Checkout** — cart widget, checkout flow, payment selector | Protocol Commerce | P0 | Core differentiator; makes UCP real for end users |
-| 10 | **AP2 Consent Flow** — mandate rendering and signing | Trust | P0 | Required for any UCP transaction; EU AI Act prep |
-| 11 | **Embedded Checkout Bridge** (UCP `requires_escalation` handling) | Protocol Commerce | P0 | Handles the hybrid agent/human checkout flow UCP requires |
-| 12 | **Google Pay Integration** in checkout flow | Protocol Commerce | P0 | Default payment path for UCP; drives Google Pay adoption |
-| 13 | **Fulfillment Picker** (shipping, pickup, delivery windows) | Protocol Commerce | P1 | Key merchant requirement; driven by UCP fulfillment extensions |
-| 14 | **Discount & Loyalty Widget** | Protocol Commerce | P1 | Revenue driver for merchants; UCP discount/loyalty extensions |
-| 15 | **Basic Analytics Dashboard** — conversation volume, commerce events, error rates | Analytics | P1 | Minimum viable observability |
-| 16 | **Webhook Gateway** for server-side event delivery | Developer Platform | P1 | Enables server-side integrations, CRM sync, alerting |
+| 9 | **UCP-Native Inline Checkout** — cart, checkout flow, payment selector | Protocol Commerce | P0 | Core value prop; see [TECHNICAL_SPEC.md §5](./CHAT_SDK_TECHNICAL_SPEC.md#5-commerce-engine-specification) |
+| 10 | **AP2 Consent Flows** — mandate rendering and cryptographic signing | Trust | P0 | Required for any UCP transaction |
+| 11 | **Embedded Checkout Bridge** — JSON-RPC 2.0 bridge for `requires_escalation` | Protocol Commerce | P0 | See [TECHNICAL_SPEC.md §13](./CHAT_SDK_TECHNICAL_SPEC.md#13-embedded-checkout-bridge-json-rpc-20) |
+| 12 | **Google Pay Integration** in checkout flow | Protocol Commerce | P0 | Default payment path for UCP |
+| 13 | **Multilingual Rich Content** (10 languages) | Extensible Widgets | P0 | Global deployment blocker (Woolworths AU, Zalando EU) |
+| 14 | **TypeScript SDK + React SDK** | Developer Platform | P1 | Developer experience; see [TECHNICAL_SPEC.md §8](./CHAT_SDK_TECHNICAL_SPEC.md#8-react-sdk-specification) |
+| 15 | **Conversation History API** with Firestore persistence | Developer Platform | P1 | Cross-session continuity |
 
 **Phase 1 Exit Criteria:**
-- SDK v2 API is GA with full documentation
+- SDK v2 API is GA with full documentation and published VPAT
 - UCP checkout flow works end-to-end in the chat thread
+- 100% axe-core accessibility pass rate; tested with NVDA, JAWS, VoiceOver, Narrator
+- Streaming renderer handles text/widget interleaving at P95 <300ms time-to-first-character
+- Transaction audit trail captures all commerce events with payload hashing
 - At least 2 launch partners (e.g., Kroger, Lowe's) live with new SDK
-- Widget Registry supports custom widget registration
-- Rich content renders in 10+ languages
+- Initial bundle size <60 KB gzipped (see [TECHNICAL_SPEC.md §14](./CHAT_SDK_TECHNICAL_SPEC.md#14-performance-budgets))
 
 ---
 
-### Phase 2: Differentiation — "Commerce in Every Thread"
-**Q3-Q4 2026 (October - December)**
+### REVISED Phase 2: "Make It Intelligent"
+**Q4 2026 (October - December)**
 
-Phase 2 introduces the capabilities that make the Chat SDK categorically different from any competitor's chat experience.
-
-#### Q4 2026 (October - December): Generative + Multi-Agent
+Phase 2 answers: **can the SDK render anything an agent can imagine?**
 
 | # | Feature | Pillar | Priority | Rationale |
 |---|---------|--------|----------|-----------|
-| 17 | **Generative UI Pipeline** — AI-rendered widgets for uncovered intents | Extensible Widgets | P0 | Eliminates widget coverage gaps; enables infinite use cases |
-| 18 | **Multi-Agent Thread** with agent identity and handoff UI | Multi-Agent | P0 | Key GECX differentiator (shopping → service in one thread) |
-| 19 | **Cross-Merchant Cart** — unified cart spanning multiple retailers | Protocol Commerce | P0 | Comparison shopping killer feature; leverages Shopping Graph |
-| 20 | **ACP Compatibility Layer** — render OpenAI/Stripe merchant checkouts | Protocol Commerce | P0 | Protocol-agnostic surface; captures merchants on both UCP and ACP |
-| 21 | **Voice-in-Chat** — inline voice messages with transcription | Multimodal | P1 | Matches Salesforce Agentforce Voice and Shopify Sidekick voice |
-| 22 | **Image Understanding** — visual search from user photos | Multimodal | P1 | Gemini multimodal advantage; high conversion impact |
-| 23 | **Proactive Engagement Engine** — intent signals + smart triggers | Proactive | P1 | Shifts from reactive to anticipatory; major competitor gap |
-| 24 | **Plugin Architecture** — third-party plugin registry | Developer Platform | P1 | Enables ecosystem; Shopify/Salesforce connector plugins |
-| 25 | **Commerce Funnel Analytics** — full conversion tracking | Analytics | P1 | Required for merchant ROI measurement |
-| 26 | **A2A Protocol Integration** for multi-agent orchestration | Multi-Agent | P1 | Connects to Google's A2A ecosystem |
-| 27 | **Agent Identity Verification** + KYA framework | Trust | P1 | Differentiator for enterprise trust; EU AI Act compliance |
-| 28 | **A/B Testing Framework** | Analytics | P2 | Enables data-driven optimization of chat experiences |
-| 29 | **Order Tracking & Returns Widget** | Protocol Commerce | P1 | Post-purchase lifecycle in the same thread |
-| 30 | **Mobile Web Optimization** — responsive, touch-native experience | Platform | P1 | Mobile is 60%+ of e-commerce traffic |
+| 16 | **Generative UI Pipeline** — AI-rendered widgets for novel intents | Extensible Widgets | P0 | Eliminates widget coverage ceiling |
+| 17 | **Multi-Agent Thread** with agent identity, handoff UI, agent roster | Multi-Agent | P0 | Key GECX differentiator (shopping → service in one thread) |
+| 18 | **ACP Compatibility Layer** — render OpenAI/Stripe merchant checkouts | Protocol Commerce | P0 | Protocol-agnostic surface |
+| 19 | **Cross-Merchant Cart** — unified cart spanning multiple retailers | Protocol Commerce | P0 | Shopping Graph monetization |
+| 20 | **Proactive Engagement Engine** — intent signals + smart triggers | Proactive | P1 | Shifts from reactive to anticipatory |
+| 21 | **Image Understanding + Visual Search** | Multimodal | P1 | Gemini multimodal advantage |
+| 22 | **Voice-in-Chat** — inline voice with transcription | Multimodal | P1 | Multimodal parity with competitors |
+| 23 | **Commerce Funnel Analytics** — full conversion tracking | Analytics | P1 | Required for merchant ROI measurement |
+| 24 | **Plugin Architecture** — third-party plugin registry | Developer Platform | P1 | Ecosystem enablement |
+| 25 | **A2A + MCP Protocol Integration** | Multi-Agent | P1 | Multi-agent orchestration + tool connectivity |
 
 **Phase 2 Exit Criteria:**
-- Generative UI renders custom widgets from agent intent with <500ms latency
+- Generative UI renders novel widgets from agent intent with <500ms latency
 - Multi-agent handoff works between shopping and service agents in one thread
 - Cross-merchant cart aggregates products from 3+ retailers
-- ACP checkout renders alongside UCP checkout in same thread
+- ACP checkout renders alongside UCP checkout in same SDK
 - 5+ launch partners live; 2+ using proactive engagement
 
 ---
 
-### Phase 3: Dominance — "The Agentic Surface"
+### REVISED Phase 3: "Make It Scale"
 **Q1-Q2 2027 (January - June)**
 
-Phase 3 pushes into forward-looking capabilities that establish the Chat SDK as the definitive agentic commerce surface.
-
-#### Q1 2027 (January - March): Spatial + Autonomous
+Phase 3 scales what works. Deliberately thin — the features that matter most in Phase 3 will be obvious from usage data.
 
 | # | Feature | Pillar | Priority | Rationale |
 |---|---------|--------|----------|-----------|
-| 31 | **3D/AR Product Viewer** — WebXR inline viewer with AR try-on | Multimodal | P1 | 11x conversion lift; Apple visionOS 26 compatible |
-| 32 | **Autonomous Delegation Mode** — user sets budget/rules, agent shops independently | Proactive | P1 | Amazon Rufus auto-buy competitor; highest-value power users |
-| 33 | **Collaborative Shopping** — shared threads with multiple users | Multi-Agent | P1 | Social commerce; differentiator vs. single-user competitors |
-| 34 | **Native Mobile SDKs** (iOS + Android) | Platform | P1 | Break out of web-only; app integration for Kroger, Papa Johns |
-| 35 | **BigQuery Export + Streaming** | Analytics | P1 | Enterprise analytics; feeds into existing BI infrastructure |
-| 36 | **Transaction Audit Trail** | Trust | P0 | EU AI Act compliance (enforceable August 2026); enterprise requirement |
-
-#### Q2 2027 (April - June): Ecosystem + Scale
-
-| # | Feature | Pillar | Priority | Rationale |
-|---|---------|--------|----------|-----------|
-| 37 | **Spatial Computing Surface** — visionOS, WebXR immersive thread | Multimodal | P2 | Forward bet; positions for spatial commerce era |
-| 38 | **Subscription Management Widget** — renewals, billing, cross-vendor optimization | Protocol Commerce | P1 | High-retention use case; recurring revenue for merchants |
-| 39 | **B2B Procurement Workflows** — RFQ, bid comparison, contract negotiation | Protocol Commerce | P2 | Taps into $15T B2B opportunity |
-| 40 | **Widget Marketplace** — third-party widget discovery and installation | Extensible Widgets | P2 | Ecosystem flywheel; developer community |
-| 41 | **Cross-Border Commerce** — multi-currency, international fulfillment | Protocol Commerce | P2 | Global expansion; UCP multi-market support |
-| 42 | **Kiosk & In-Car SDK** — embedded surface for physical commerce | Platform | P2 | Papa Johns, automotive partnerships; IoT touchpoints |
-| 43 | **Real-Time Monitoring + Anomaly Detection** | Analytics | P1 | Enterprise-grade operational reliability |
-| 44 | **MCP Integration** for agent-to-tool connectivity | Multi-Agent | P1 | Protocol completeness; connects to Anthropic/AAIF ecosystem |
+| 26 | **Native Mobile SDKs** (iOS + Android) | Platform | P1 | App integration for Kroger, Papa Johns |
+| 27 | **BigQuery Analytics Export** — streaming event export | Analytics | P1 | Enterprise BI integration |
+| 28 | **Real-Time Monitoring + Anomaly Detection** | Analytics | P1 | Enterprise operational reliability |
 
 **Phase 3 Exit Criteria:**
-- 3D/AR viewer deployed with at least one furniture/fashion retailer
-- Autonomous delegation mode live with spending limits and approval flows
-- Native iOS and Android SDKs in beta
-- EU AI Act compliance verified for transaction audit trail
+- Native iOS and Android SDKs in beta with 10+ apps
+- BigQuery export live with streaming event delivery
 - 20+ partners live on Chat SDK v2
+- Commerce GMV on trajectory to $500M+ monthly
+
+### Features Cut from v1 (and why)
+
+| Cut Feature | Reason |
+|------------|--------|
+| Spatial Computing Surface (visionOS) | ~1M Vision Pro units sold; premature for 2027. If Widget Registry works, community builds this. |
+| Kiosk & In-Car SDK | Partners build surfaces; we provide the API. Not our hardware. |
+| B2B Procurement Workflows | Vertical application, not SDK feature. Form + Table widgets enable this. |
+| Widget Marketplace | Need ecosystem before marketplace. Phase 4 (2028) at earliest. |
+| Collaborative Shopping | Enormous engineering complexity (real-time sync, conflict resolution). Standalone initiative. |
+| Countdown Timer widget | Dark pattern. Merchants can build their own if they want urgency marketing. |
+| Signature Capture widget | Too niche for a built-in. Custom widget via registry. |
+| A/B Testing Framework | Deferred to Phase 3+ based on demand signals. |
+| Autonomous Delegation Mode | Compelling but premature for the current trust infrastructure maturity. |
+| 3D/AR Product Viewer | Moved to Phase 3+ based on WebXR adoption. Available via custom widget earlier. |
+| Subscription Management Widget | Available via Form + custom widget pattern. |
+| Cross-Border Commerce | UCP multi-market support handles this at protocol level. |
+| Order Tracking Widget (standalone) | Remains as a built-in widget, folded into Phase 1 Widget Registry. |
+| Discount & Loyalty Widget (standalone) | Remains as a built-in widget, folded into Phase 1 Widget Registry. |
+| Fulfillment Picker (standalone) | Remains as a built-in widget, folded into Phase 1 Widget Registry. |
+| Developer Console | Deferred to Phase 2. Nice-to-have, not a blocker. |
 
 ---
 
